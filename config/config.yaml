@@ -1,0 +1,144 @@
+# Конфигурация пайплайна машинного обучения
+data:
+  # Путь к исходным данным
+  source_file: "data/wdbc.data.csv"
+  # Колонки датасета (Wisconsin Breast Cancer Diagnostic)
+  columns:
+    - "id"
+    - "diagnosis"
+    - "radius_mean"
+    - "texture_mean"
+    - "perimeter_mean"
+    - "area_mean"
+    - "smoothness_mean"
+    - "compactness_mean"
+    - "concavity_mean"
+    - "concave_points_mean"
+    - "symmetry_mean"
+    - "fractal_dimension_mean"
+    - "radius_se"
+    - "texture_se"
+    - "perimeter_se"
+    - "area_se"
+    - "smoothness_se"
+    - "compactness_se"
+    - "concavity_se"
+    - "concave_points_se"
+    - "symmetry_se"
+    - "fractal_dimension_se"
+    - "radius_worst"
+    - "texture_worst"
+    - "perimeter_worst"
+    - "area_worst"
+    - "smoothness_worst"
+    - "compactness_worst"
+    - "concavity_worst"
+    - "concave_points_worst"
+    - "symmetry_worst"
+    - "fractal_dimension_worst"
+  
+  # Размер тестовой выборки
+  test_size: 0.2
+  # Случайное состояние для воспроизводимости
+  random_state: 42
+
+model:
+  # Параметры модели LogisticRegression
+  type: "LogisticRegression"
+  parameters:
+    random_state: 42
+    max_iter: 1000
+    solver: "liblinear"
+
+storage:
+  # Настройки для локального хранилища
+  local:
+    results_path: "results/"
+    models_path: "results/models/"
+    metrics_path: "results/metrics/"
+  
+  # Настройки для облачного хранилища (Google Cloud Storage)
+  gcs:
+    bucket_name: "ml-pipeline-results"
+    credentials_path: "config/gcs-credentials.json"
+  
+  # Настройки для AWS S3
+  s3:
+    bucket_name: "ml-pipeline-s3-bucket"
+    region: "us-east-1"
+  
+  # Настройки базы данных
+  database:
+    type: "sqlite"  # sqlite, postgresql, mysql
+    path: "ml_pipeline.db"  # для SQLite
+    host: "localhost"
+    port: 5432
+    database: "ml_pipeline"
+    username: "ml_user"
+    # password устанавливается через переменную окружения DB_PASSWORD
+
+preprocessing:
+  # Настройки предобработки данных
+  outlier_detection:
+    method: "iqr"  # iqr, zscore, isolation_forest
+    action: "cap"  # remove, cap, transform
+  
+  # Feature engineering
+  feature_engineering:
+    enabled: true
+    create_ratios: true
+    create_aggregates: true
+    create_composite_features: true
+  
+  # Отбор признаков
+  feature_selection:
+    enabled: true
+    method: "univariate"  # univariate, rfe, pca
+    n_features: 20
+  
+  # Настройки скейлинга
+  scaling:
+    method: "standard"  # standard, robust, minmax
+  
+  # Настройки разделения данных
+  train_test_split:
+    test_size: 0.2
+    stratify: true
+    
+data_quality:
+  # Пороги для качества данных
+  thresholds:
+    missing_values_pct: 5.0
+    duplicate_rows_pct: 1.0
+    outliers_pct: 10.0
+  
+  # Настройки мониторинга дрейфа данных
+  drift_detection:
+    enabled: true
+    statistical_test: "ks_test"  # ks_test, chi2_test
+    p_value_threshold: 0.05
+    distribution_change_threshold: 0.1
+
+logging:
+  # Уровень логирования
+  level: "INFO"
+  # Путь к файлам логов
+  log_path: "logs/"
+  # Формат логов
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+airflow:
+  # Настройки DAG
+  dag_id: "breast_cancer_ml_pipeline"
+  description: "Пайплайн машинного обучения для диагностики рака молочной железы"
+  schedule_interval: null  # Запуск по требованию
+  start_date: "2024-01-01"
+  catchup: false
+  max_active_runs: 1
+  
+  # Настройки повторных попыток
+  retries: 2
+  retry_delay_minutes: 5
+  
+  # Настройки таймаутов
+  timeout_minutes: 30

@@ -1,0 +1,14 @@
+{
+  "pipeline_info": {
+    "dag_id": "test_dag",
+    "run_id": "test_run",
+    "logical_date": "2025-06-16T02:50:35.598840",
+    "start_date": "2025-06-16T02:50:35.598827",
+    "timestamp": "20250616_025035"
+  },
+  "note": "Данные собраны из файловой системы для стабильности работы",
+  "files_processed": [
+    "Model: results/models/current_model.joblib -> results/final_model_20250616_025035.joblib",
+    "Metrics: results/metrics.json -> results/final_metrics_20250616_025035.json"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250616_000108",
+  "files_saved": [
+    "results/final_model_20250616_000108.joblib",
+    "results/final_metrics_20250616_000108.json",
+    "results/ml_pipeline_results_20250616_000108.zip"
+  ],
+  "save_operations": {
+    "local_save": true,
+    "gcs_upload": false,
+    "s3_upload": false,
+    "archive_created": true
+  },
+  "local_results_path": "results/pipeline_results_20250616_000108.json",
+  "archive_path": "results/ml_pipeline_results_20250616_000108.zip"
+}

@@ -1,0 +1,39 @@
+# Оптимизированные настройки для macOS + PostgreSQL
+
+[database]
+# Пулинг соединений для уменьшения количества процессов PostgreSQL
+sql_alchemy_pool_size = 5
+sql_alchemy_pool_recycle = 3600
+sql_alchemy_pool_pre_ping = True
+sql_alchemy_max_overflow = 10
+
+# Таймауты соединений
+sql_alchemy_connect_args = {"connect_timeout": 60}
+
+[scheduler]
+# Увеличенные интервалы для снижения нагрузки
+job_heartbeat_sec = 30
+scheduler_heartbeat_sec = 30
+local_task_job_heartbeat_sec = 60
+scheduler_zombie_task_threshold = 900
+zombie_detection_interval = 120.0
+
+# Ограничение параллельности
+max_active_runs_per_dag = 1
+max_active_tasks_per_dag = 4
+
+[core]
+# Ограничение параллельности
+parallelism = 8
+max_active_tasks_per_dag = 4
+max_active_runs_per_dag = 1
+
+# Таймауты задач
+task_timeout = 300
+dagbag_import_timeout = 60
+
+[webserver]
+# Оптимизация веб-сервера
+workers = 1
+worker_timeout = 300
+worker_class = sync

@@ -1,0 +1,13 @@
+# Минимальные зависимости для тестирования сборки
+pandas==2.1.4
+numpy==1.26.2
+scikit-learn==1.3.2
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Базы данных
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+
+# Тестирование
+pytest==7.4.3

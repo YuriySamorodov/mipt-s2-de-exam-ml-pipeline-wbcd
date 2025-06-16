@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/bin/airflow", line 10, in <module>
+    sys.exit(main())
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/__main__.py", line 57, in main
+    args.func(args)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 484, in webserver
+    run_command_with_daemon_option(
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/daemon_utils.py", line 81, in run_command_with_daemon_option
+    callback()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 487, in <lambda>
+    callback=lambda: start_and_monitor_gunicorn(args),
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 471, in start_and_monitor_gunicorn
+    monitor_gunicorn(gunicorn_master_proc)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 447, in monitor_gunicorn
+    GunicornMonitor(
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 210, in start
+    self._wait_until_true(
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 156, in _wait_until_true
+    while not fn():
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 211, in <lambda>
+    lambda: self.num_workers_expected == self._get_num_workers_running(),
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/airflow/cli/commands/webserver_command.py", line 150, in _get_num_workers_running
+    workers = psutil.Process(self.gunicorn_master_proc.pid).children()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/psutil/__init__.py", line 317, in __init__
+    self._init(pid)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.9/site-packages/psutil/__init__.py", line 363, in _init
+    raise NoSuchProcess(pid, msg=msg) from None
+psutil.NoSuchProcess: process PID not found (pid=2795)

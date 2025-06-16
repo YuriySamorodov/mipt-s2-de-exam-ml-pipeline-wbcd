@@ -1,0 +1,8 @@
+# Игнорировать экспортированные Docker образы
+*.tar
+*.tar.gz
+*.tar.xz
+*_info.txt
+
+# Разрешить README.md в папке
+!README.md

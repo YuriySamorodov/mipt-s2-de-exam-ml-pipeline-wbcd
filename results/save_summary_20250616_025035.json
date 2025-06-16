@@ -1,0 +1,11 @@
+{
+  "timestamp": "20250616_025035",
+  "files_saved": [
+    "results/final_model_20250616_025035.joblib",
+    "results/final_metrics_20250616_025035.json",
+    "results/pipeline_results_20250616_025035.json"
+  ],
+  "local_save_success": true,
+  "total_files": 3,
+  "note": "Упрощенный режим сохранения для стабильности Airflow"
+}
