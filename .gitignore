@@ -140,14 +140,15 @@ docker-images/*_info.txt
 # Docker build cache
 .docker/
 
-# Screenshots - включаем изображения результатов ML-модели для GitHub
-# Исключаем только временные и системные файлы
-screenshots/**/.DS_Store
-screenshots/**/Thumbs.db
+# Screenshots (exclude actual image files but keep structure)
+screenshots/**/*.png
+screenshots/**/*.jpg
+screenshots/**/*.jpeg
+screenshots/**/*.gif
+screenshots/**/*.bmp
+screenshots/**/*.tiff
+screenshots/**/*.webp
 
-# Keep all documentation and results images in screenshots
+# Keep README and placeholder files in screenshots
 !screenshots/**/README.md
 !screenshots/**/.placeholder.md
-!screenshots/**/*.png
-!screenshots/**/*.jpg
-!screenshots/**/*.jpeg

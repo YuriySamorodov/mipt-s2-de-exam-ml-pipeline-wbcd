@@ -1,11 +1,12 @@
 # Single Repository Docker Hub Setup
+## ML Pipeline для Wisconsin Breast Cancer Diagnostic Dataset
 
 > **Обновлено**: Исправлены проблемы с передачей аргументов между скриптами.
 > Теперь `setup_single_repo.sh` корректно передает версию и username в `build_and_publish_repo.sh`.
 
 ## Концепция
 
-Этот подход размещает два отдельных образа (PostgreSQL и Airflow) в одном репозитории Docker Hub с разными тегами:
+Этот подход размещает два отдельных образа (PostgreSQL и Airflow) в одном репозитории Docker Hub с разными тегами для ML-пайплайна диагностики рака молочной железы на основе Wisconsin Breast Cancer Diagnostic Dataset:
 
 ```
 yuriysamorodov/mipt-s2-de-ml-pipeline:airflow-latest # Apache Airflow + ML Pipeline
