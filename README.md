@@ -811,6 +811,8 @@ docker-compose down -v
 ```
 
 ### Пример Docker
+![Docker Web](https://github.com/YuriySamorodov/mipt-s2-de-exam-ml-pipeline-wbcd/blob/main/screenshots/setup/docker%20hub%20webui%202.png)
+
 ![Docker Deploy](screenshots/setup/docker%20deploy.png)
 *Пример развертывания ML Pipeline в Docker с использованием docker-compose*
 
@@ -906,7 +908,7 @@ docker-compose ps
 ```
 
 ### 2. Доступ к интерфейсам
-- **Airflow Web UI**: http://localhost:8080
+- **Airflow Web UI**: http://localhost:8083
 - Логин: `admin`
 - Пароль: `admin`
 - **PostgreSQL**: localhost:5432
@@ -917,10 +919,10 @@ docker-compose ps
 ### 3. Проверка DAG
 ```bash
 # Список DAG
-curl -X GET "http://localhost:8080/api/v1/dags" --user admin:admin
+curl -X GET "http://localhost:8083/api/v1/dags" --user admin:admin
 
 # Запуск ML пайплайна
-curl -X POST "http://localhost:8080/api/v1/dags/breast_cancer_ml_pipeline/dagRuns" \
+curl -X POST "http://localhost:8083/api/v1/dags/breast_cancer_ml_pipeline/dagRuns" \
 -H "Content-Type: application/json" \
 -d '{"dag_run_id": "manual_run_$(date +%s)"}' \
 --user admin:admin
