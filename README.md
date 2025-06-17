@@ -440,7 +440,7 @@ export AIRFLOW__WEBSERVER__WEB_SERVER_PORT=8082
 ```
 
 ### Пример работы с PostgreSQL
-![PostgreSQL Database](screenshots/database/postgres%20dataset%20db.png)
+![Главное окно Airflow](https://github.com/YuriySamorodov/mipt-s2-de-exam-ml-pipeline-wbcd/blob/main/screenshots/setup/Airflow%20-%20two%20webservers%20together.png)
 *Подключение к базе данных PostgreSQL с загруженными данными*
 
 ---
@@ -810,7 +810,7 @@ docker-compose down
 docker-compose down -v
 ```
 
-### Пример Docker развертывания
+### Пример Docker
 ![Docker Deploy](screenshots/setup/docker%20deploy.png)
 *Пример развертывания ML Pipeline в Docker с использованием docker-compose*
 
