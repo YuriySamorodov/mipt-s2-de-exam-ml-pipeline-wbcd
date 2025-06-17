@@ -1,0 +1,266 @@
+# Docker Compose для ML Pipeline с Apache Airflow
+version: '3.8'
+
+x-airflow-common:
+&airflow-common
+# image: yuriysamorodov/mipt-s2-de-ml-pipeline:airflow-latest # Готовый образ с Docker Hub
+build: # Используем локальную сборку для избежания проблем с готовым образом
+context: .. # Контекст от корня проекта
+dockerfile: docker/Dockerfile.airflow
+# image: apache/airflow:2.8.1
+environment: &airflow-common-env
+AIRFLOW__CORE__EXECUTOR: LocalExecutor
+AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+AIRFLOW__CORE__FERNET_KEY: ''
+AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
+AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+AIRFLOW__WEBSERVER__WEB_SERVER_PORT: 8082 # Docker использует внутренний порт 8082 (PostgreSQL + LocalExecutor)
+# Оптимизации для устранения zombie процессов
+AIRFLOW__CORE__PARALLELISM: 8
+AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: 4
+AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: 1
+AIRFLOW__SCHEDULER__JOB_HEARTBEAT_SEC: 30
+AIRFLOW__SCHEDULER__SCHEDULER_HEARTBEAT_SEC: 15
+AIRFLOW__SCHEDULER__LOCAL_TASK_JOB_HEARTBEAT_SEC: 120
+AIRFLOW__SCHEDULER__SCHEDULER_ZOMBIE_TASK_THRESHOLD: 1800
+AIRFLOW__SCHEDULER__ZOMBIE_DETECTION_INTERVAL: 300
+AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
+AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
+AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_PRE_PING: 'True'
+AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+# _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-} # Используем requirements-airflow.txt вместо переменной окружения
+volumes:
+- ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+- ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
+- ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
+- ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+- ${AIRFLOW_PROJ_DIR:-.}/etl:/opt/airflow/etl
+- ${AIRFLOW_PROJ_DIR:-.}/src:/opt/airflow/src
+- ${AIRFLOW_PROJ_DIR:-.}/data:/opt/airflow/data
+- ${AIRFLOW_PROJ_DIR:-.}/results:/opt/airflow/results
+user: "${AIRFLOW_UID:-50000}:0"
+depends_on: &airflow-common-depends-on
+postgres:
+condition: service_healthy
+
+services:
+# База данных для Airflow
+postgres:
+image: postgres:13 # Официальный образ PostgreSQL
+environment:
+POSTGRES_USER: airflow
+POSTGRES_PASSWORD: airflow
+POSTGRES_DB: airflow
+volumes:
+- postgres-db-volume:/var/lib/postgresql/data
+healthcheck:
+test: ["CMD", "pg_isready", "-U", "airflow"]
+interval: 10s
+retries: 5
+start_period: 5s
+restart: always
+ports:
+- "5433:5432" # Используем внешний порт 5433 для избежания конфликта с локальным PostgreSQL
+
+# Инициализация Airflow
+airflow-init:
+<<: *airflow-common
+entrypoint: /bin/bash
+command:
+- -c
+- |
+function ver() {
+printf "%04d%04d%04d%04d" $${1//./ }
+}
+airflow_version=$$(AIRFLOW__LOGGING__LOGGING_LEVEL=INFO && gosu airflow airflow version)
+airflow_version_comparable=$$(ver $${airflow_version})
+min_airflow_version=2.2.0
+min_airflow_version_comparable=$$(ver $${min_airflow_version})
+if (( airflow_version_comparable < min_airflow_version_comparable )); then
+echo -e "\\033[1;31mERROR!!!: Too old Airflow version $${airflow_version}!\\e[0m"
+echo "The minimum Airflow version supported: $${min_airflow_version}. Only use this or higher!"
+exit 1
+fi
+if [[ -z "${AIRFLOW_UID}" ]]; then
+echo -e "\\033[1;33mWARNING!!!: AIRFLOW_UID not set!\\e[0m"
+echo "If you are on Linux, you SHOULD follow the instructions below to set "
+echo "AIRFLOW_UID environment variable, otherwise files will be owned by root."
+echo "For other operating systems you can get rid of the warning with manually created .env file:"
+echo " See: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#setting-the-right-airflow-user"
+fi
+one_meg=1048576
+mem_available=$$(($$(getconf _PHYS_PAGES) * $$(getconf PAGE_SIZE) / one_meg))
+cpus_available=$$(grep -cE 'cpu[0-9]+' /proc/stat)
+disk_available=$$(df / | tail -1 | awk '{print $$4}')
+warning_resources="false"
+if (( mem_available < 4000 )) ; then
+echo -e "\\033[1;33mWARNING!!!: Not enough memory available for Docker.\\e[0m"
+echo "At least 4GB of memory required. You have $$(numfmt --to iec $$((mem_available * one_meg)))"
+warning_resources="true"
+fi
+if (( cpus_available < 2 )); then
+echo -e "\\033[1;33mWARNING!!!: Not enough CPUS available for Docker.\\e[0m"
+echo "At least 2 CPUs recommended. You have $${cpus_available}"
+warning_resources="true"
+fi
+if (( disk_available < one_meg )); then
+echo -e "\\033[1;33mWARNING!!!: Not enough Disk space available for Docker.\\e[0m"
+echo "At least 1 GiB recommended. You have $$(numfmt --to iec $$((disk_available * 1024 )))"
+warning_resources="true"
+fi
+if [[ $${warning_resources} == "true" ]]; then
+echo -e "\\033[1;33mWARNING!!!: You have not enough resources to run Airflow (see above)!\\e[0m"
+echo "Please follow the instructions to increase amount of resources available:"
+echo " https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#before-you-begin"
+fi
+mkdir -p /sources/logs /sources/dags /sources/plugins
+chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
+exec /entrypoint airflow version
+environment:
+<<: *airflow-common-env
+_AIRFLOW_DB_UPGRADE: 'true'
+_AIRFLOW_WWW_USER_CREATE: 'true'
+_AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-admin}
+_AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-admin}
+_PIP_ADDITIONAL_REQUIREMENTS: ''
+user: "0:0"
+volumes:
+- ${AIRFLOW_PROJ_DIR:-.}:/sources
+
+# Веб-сервер Airflow
+airflow-webserver:
+<<: *airflow-common
+command: webserver --port 8082
+ports:
+- "8083:8082" # Docker вариант: внешний порт 8083, внутренний порт 8082 (PostgreSQL + LocalExecutor)
+healthcheck:
+test: ["CMD", "curl", "--fail", "http://localhost:8082/health"]
+interval: 30s
+timeout: 10s
+retries: 5
+start_period: 30s
+restart: always
+depends_on:
+<<: *airflow-common-depends-on
+airflow-init:
+condition: service_completed_successfully
+
+# Планировщик Airflow
+airflow-scheduler:
+<<: *airflow-common
+command: scheduler
+healthcheck:
+test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
+interval: 30s
+timeout: 10s
+retries: 5
+start_period: 30s
+restart: always
+depends_on:
+<<: *airflow-common-depends-on
+airflow-init:
+condition: service_completed_successfully
+
+# Воркер Airflow (для CeleryExecutor, если нужен)
+# airflow-worker:
+# <<: *airflow-common
+# command: celery worker
+# healthcheck:
+# test:
+# - "CMD-SHELL"
+# - 'celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
+# interval: 30s
+# timeout: 10s
+# retries: 5
+# start_period: 30s
+# environment:
+# <<: *airflow-common-env
+# DUMB_INIT_SETSID: "0"
+# restart: always
+# depends_on:
+# <<: *airflow-common-depends-on
+# airflow-init:
+# condition: service_completed_successfully
+
+# ML Pipeline сервис
+ml-pipeline:
+build:
+context: .
+dockerfile: Dockerfile
+container_name: ml-pipeline
+volumes:
+- ./data:/app/data
+- ./results:/app/results
+- ./logs:/app/logs
+- ./config:/app/config
+environment:
+- CONFIG_PATH=config/config.yaml
+- LOG_LEVEL=INFO
+- ENVIRONMENT=docker
+depends_on:
+- postgres
+restart: unless-stopped
+profiles:
+- ml-pipeline # Запускается только при указании профиля
+
+# Jupyter Notebook для разработки и анализа
+jupyter:
+image: jupyter/scipy-notebook:latest
+container_name: ml-pipeline-jupyter
+ports:
+- "8888:8888"
+volumes:
+- ./notebooks:/home/jovyan/work/notebooks
+- ./data:/home/jovyan/work/data
+- ./results:/home/jovyan/work/results
+- ./etl:/home/jovyan/work/etl
+- ./config:/home/jovyan/work/config
+environment:
+- JUPYTER_ENABLE_LAB=yes
+- JUPYTER_TOKEN=ml-pipeline-token
+command: start-notebook.sh --NotebookApp.token='ml-pipeline-token'
+profiles:
+- jupyter # Запускается только при указании профиля
+
+# Grafana для мониторинга (опционально)
+grafana:
+image: grafana/grafana:latest
+container_name: ml-pipeline-grafana
+ports:
+- "3000:3000"
+environment:
+- GF_SECURITY_ADMIN_PASSWORD=admin
+volumes:
+- grafana-storage:/var/lib/grafana
+profiles:
+- monitoring # Запускается только при указании профиля
+
+# Prometheus для сбора метрик (опционально)
+prometheus:
+image: prom/prometheus:latest
+container_name: ml-pipeline-prometheus
+ports:
+- "9090:9090"
+volumes:
+- ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+- prometheus-storage:/prometheus
+command:
+- '--config.file=/etc/prometheus/prometheus.yml'
+- '--storage.tsdb.path=/prometheus'
+- '--web.console.libraries=/etc/prometheus/console_libraries'
+- '--web.console.templates=/etc/prometheus/consoles'
+- '--storage.tsdb.retention.time=200h'
+- '--web.enable-lifecycle'
+profiles:
+- monitoring # Запускается только при указании профиля
+
+volumes:
+postgres-db-volume:
+grafana-storage:
+prometheus-storage:
+
+networks:
+default:
+name: ml-pipeline-network

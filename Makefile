@@ -2,142 +2,167 @@
 # Автор: Самородов Юрий Сергеевич, МФТИ
 # Дата: 2025-06-14
 # Версия: 1.0
-# Описание: Этот Makefile автоматизирует процессы установки, настройки, тестирования и запуска ML пайплайна для диагностики рака молочной железы.
+# Описа# Запуск отдельных компонентов
+run-components: check-venv
+	@echo "Тестирование загрузки данных..."
+	$(PYTHON) src/etl/data_loader.py
+	@echo ""
+	@echo "Тестирование предобработки..."
+	$(PYTHON) src/etl/data_preprocessor.py
+	@echo ""
+	@echo "Тестирование обучения модели..."
+	$(PYTHON) src/etl/model_trainer.py
+	@echo ""
+	@echo "Тестирование расчета метрик..."
+	$(PYTHON) src/etl/metrics_calculator.py
+	@echo ""
+	@echo "Тестирование сохранения результатов..."
+	$(PYTHON) src/etl/storage_manager.pyle автоматизирует процессы установки, настройки, тестирования и запуска ML пайплайна для диагностики рака молочной железы.
 # Использование:
-#   make install          - Установка зависимостей
-#   make setup            - Первоначальная настройка проекта
-#   make test             - Запуск тестов
-#   make run-pipeline     - Запуск полного пайплайна локально
-#   make run-components   - Запуск отдельных компонентов пайплайна
-#   make clean            - Очистка временных файлов
-#   make lint             - Проверка кода линтерами
-#   make format           - Форматирование кода
-#   make airflow-init     - Инициализация Airflow
-#   make airflow-start    - Запуск Airflow
-#   make airflow-stop     - Остановка Airflow
-#   make docker-build     - Сборка Docker образа
-#   make docker-run       - Запуск в Docker контейнере
-#   make archive          - Создание архива проекта для GitHub
-#   make report           - Генерация отчета о проекте
-#   make demo             - Быстрый старт для демонстрации
-#   make dev-install      - Установка в режиме разработки
-#   make docs             - Создание документации
-#   make quality          - Проверка качества кода
-#   make production-ready - Подготовка проекта к продакшену
-#   make env-help         - Справка по переменным окружения
-#   make check-config     - Проверка конфигурации
-#   make airflow-test     - Тест Airflow DAG
-#   make airflow-run-task - Запуск конкретной задачи в Airflow
-#   make install          - Установка всех зависимостей
-#   make setup            - Создание виртуального окружения и установка зависимостей
-#   make test             - Запуск тестов
-#   make run-pipeline     - Запуск полного пайплайна
-#   make run-components   - Запуск отдельных компонентов пайплайна
-#   make clean            - Очистка временных файлов
-#   make lint             - Проверка кода линтерами
-#   make format           - Форматирование кода
-#   make airflow-init     - Инициализация Airflow
-#   make airflow-start    - Запуск Airflow
-#   make airflow-stop     - Остановка Airflow
-#   make docker-build     - Сборка Docker образа
-#   make docker-run       - Запуск в Docker контейнере
-#   make archive          - Создание архива проекта для GitHub
-#   make report           - Генерация отчета о проекте
-#   make demo             - Быстрый старт для демонстрации
-#   make dev-install      - Установка в режиме разработки
-#   make docs             - Создание документации	
+# make install - Установка зависимостей
+# make setup - Первоначальная настройка проекта
+# make test - Запуск тестов
+# make run-pipeline - Запуск полного пайплайна локально
+# make run-components - Запуск отдельных компонентов пайплайна
+# make clean - Очистка временных файлов
+# make lint - Проверка кода линтерами
+# make format - Форматирование кода
+# make airflow-init - Инициализация Airflow
+# make airflow-start - Запуск Airflow
+# make airflow-stop - Остановка Airflow
+# make docker-build - Сборка Docker образа
+# make docker-run - Запуск в Docker контейнере
+# make archive - Создание архива проекта для GitHub
+# make report - Генерация отчета о проекте
+# make demo - Быстрый старт для демонстрации
+# make dev-install - Установка в режиме разработки
+# make docs - Создание документации
+# make quality - Проверка качества кода
+# make production-ready - Подготовка проекта к продакшену
+# make env-help - Справка по переменным окружения
+# make check-config - Проверка конфигурации
+# make airflow-test - Тест Airflow DAG
+# make airflow-run-task - Запуск конкретной задачи в Airflow
+# make install - Установка всех зависимостей
+# make setup - Создание виртуального окружения и установка зависимостей
+# make test - Запуск тестов
+# make run-pipeline - Запуск полного пайплайна
+# make run-components - Запуск отдельных компонентов пайплайна
+# make clean - Очистка временных файлов
+# make lint - Проверка кода линтерами
+# make format - Форматирование кода
+# make airflow-init - Инициализация Airflow
+# make airflow-start - Запуск Airflow
+# make airflow-stop - Остановка Airflow
+# make docker-build - Сборка Docker образа
+# make docker-run - Запуск в Docker контейнере
+# make archive - Создание архива проекта для GitHub
+# make report - Генерация отчета о проекте
+# make demo - Быстрый старт для демонстрации
+# make dev-install - Установка в режиме разработки
+# make docs - Создание документации	
 # Проект: Диагностика рака молочной железы
 
 .PHONY: help install setup test run-pipeline clean lint format docker airflow-init airflow-start airflow-stop
 
 # Переменные
-PYTHON := python3
-PIP := pip3
+ACTIVATE_VENV := ./activate_venv.sh
+PYTHON := $(ACTIVATE_VENV) python3
+PIP := $(ACTIVATE_VENV) pip
 VENV := venv
+VENV_PYTHON := ./$(VENV)/bin/python
+VENV_PIP := ./$(VENV)/bin/pip
 AIRFLOW_HOME := ./airflow
 CONFIG_FILE := config/config.yaml
 LOG_LEVEL := INFO
+
+# Проверка виртуального окружения
+check-venv:
+	@if [ ! -d "$(VENV)" ]; then \
+		echo " Виртуальное окружение не найдено. Запустите 'make setup'"; \
+		exit 1; \
+	fi
 
 # По умолчанию показываем помощь
 help:
 	@echo "ML Pipeline для диагностики рака молочной железы"
 	@echo ""
 	@echo "Доступные команды:"
-	@echo "  install         - Установка всех зависимостей"
-	@echo "  setup           - Первоначальная настройка проекта"
-	@echo "  test            - Запуск тестов"
-	@echo "  run-pipeline    - Запуск полного пайплайна локально"
-	@echo "  run-components  - Запуск отдельных компонентов пайплайна"
-	@echo "  clean           - Очистка временных файлов"
-	@echo "  lint            - Проверка кода линтерами"
-	@echo "  format          - Форматирование кода"
-	@echo "  airflow-init    - Инициализация Airflow"
-	@echo "  airflow-start   - Запуск Airflow"
-	@echo "  airflow-stop    - Остановка Airflow"
-	@echo "  docker-build    - Сборка Docker образа"
-	@echo "  docker-run      - Запуск в Docker контейнере"
-	@echo "  archive         - Создание архива проекта для GitHub"
+	@echo " install - Установка всех зависимостей"
+	@echo " setup - Первоначальная настройка проекта"
+	@echo " test - Запуск тестов"
+	@echo " run-pipeline - Запуск полного пайплайна локально"
+	@echo " run-components - Запуск отдельных компонентов пайплайна"
+	@echo " clean - Очистка временных файлов"
+	@echo " lint - Проверка кода линтерами"
+	@echo " format - Форматирование кода"
+	@echo " airflow-init - Инициализация Airflow"
+	@echo " airflow-start - Запуск Airflow"
+	@echo " airflow-stop - Остановка Airflow"
+	@echo " docker-build - Сборка Docker образа"
+	@echo " docker-run - Запуск в Docker контейнере"
+	@echo " archive - Создание архива проекта для GitHub"
 	@echo ""
 
-# Установка зависимостей
-install:
-	@echo "Установка зависимостей..."
+# Установка зависимостей в существующее venv
+install: check-venv
+	@echo "Установка зависимостей в виртуальное окружение..."
 	$(PIP) install --upgrade pip
-	$(PIP) install -r requirements.txt
-	@echo "Зависимости установлены"
+	$(PIP) install -r config/requirements.txt
+	@echo "Зависимости установлены в $(VENV)"
 
 # Создание виртуального окружения и установка зависимостей
 setup: 
 	@echo "Настройка проекта..."
 	$(PYTHON) -m venv $(VENV)
 	./$(VENV)/bin/pip install --upgrade pip
-	./$(VENV)/bin/pip install -r requirements.txt
+	./$(VENV)/bin/pip install -r config/requirements.txt
 	@echo "Создание необходимых директорий..."
 	mkdir -p data results/models results/metrics results/preprocessors logs
 	@echo "Копирование примера конфигурации..."
 	cp .env.example .env
 	@echo "Проект настроен!"
 	@echo "Не забудьте:"
-	@echo "   - Отредактировать .env файл"
-	@echo "   - Проверить config/config.yaml"
-	@echo "   - Активировать виртуальное окружение: source $(VENV)/bin/activate"
+	@echo " - Отредактировать .env файл"
+	@echo " - Проверить config/config.yaml"
+	@echo " - Активировать виртуальное окружение: source $(VENV)/bin/activate"
 
 # Запуск тестов
-test:
-	@echo "Запуск тестов..."
-	$(PYTHON) -m pytest tests/ -v --cov=etl --cov-report=html
+test: check-venv
+	@echo "Запуск тестов в виртуальном окружении..."
+	$(PYTHON) -m pytest tests/ -v --cov=src.etl --cov-report=html
 	@echo "Тесты завершены"
 
 # Запуск отдельных компонентов
-run-components:
+run-components: check-venv
 	@echo "Тестирование загрузки данных..."
-	$(PYTHON) etl/data_loader.py
+	$(VENV_PYTHON) src/etl/data_loader.py
 	@echo ""
 	@echo "Тестирование предобработки..."
-	$(PYTHON) etl/data_preprocessor.py
+	$(VENV_PYTHON) src/etl/data_preprocessor.py
 	@echo ""
 	@echo "Тестирование обучения модели..."
-	$(PYTHON) etl/model_trainer.py
+	$(VENV_PYTHON) src/etl/model_trainer.py
 	@echo ""
 	@echo "Тестирование расчета метрик..."
-	$(PYTHON) etl/metrics_calculator.py
+	$(VENV_PYTHON) src/etl/metrics_calculator.py
 	@echo ""
 	@echo "Тестирование сохранения результатов..."
-	$(PYTHON) etl/storage_manager.py
+	$(VENV_PYTHON) src/etl/storage_manager.py
 
 # Запуск полного пайплайна
-run-pipeline:
-	@echo "Запуск полного ML пайплайна..."
+run-pipeline: check-venv
+	@echo "Запуск полного ML пайплайна в виртуальном окружении..."
 	@echo "Этап 1: Загрузка данных"
-	$(PYTHON) etl/data_loader.py
+	$(VENV_PYTHON) src/etl/data_loader.py
 	@echo "Этап 2: Предобработка данных"
-	$(PYTHON) etl/data_preprocessor.py
+	$(VENV_PYTHON) src/etl/data_preprocessor.py
 	@echo "Этап 3: Обучение модели"
-	$(PYTHON) etl/model_trainer.py
+	$(VENV_PYTHON) src/etl/model_trainer.py
 	@echo "Этап 4: Оценка модели"
-	$(PYTHON) etl/metrics_calculator.py
+	$(VENV_PYTHON) src/etl/metrics_calculator.py
 	@echo "Этап 5: Сохранение результатов"
-	$(PYTHON) etl/storage_manager.py
+	$(VENV_PYTHON) src/etl/storage_manager.py
 	@echo "Пайплайн завершен успешно!"
 	@echo "Результаты сохранены в папке results/"
 
@@ -189,10 +214,10 @@ airflow-start:
 	export AIRFLOW_HOME=$(AIRFLOW_HOME) && \
 	export AIRFLOW__CORE__DAGS_FOLDER=$(PWD)/dags && \
 	export AIRFLOW__CORE__LOGS_FOLDER=$(PWD)/logs && \
-	airflow webserver --port 8080 --daemon && \
+	airflow webserver --port 8081 --daemon && \
 	airflow scheduler --daemon
 	@echo "Airflow запущен!"
-	@echo "Web UI: http://localhost:8080"
+	@echo "Web UI: http://localhost:8081 (SQLite вариант)"
 
 # Остановка Airflow
 airflow-stop:
@@ -200,6 +225,23 @@ airflow-stop:
 	pkill -f "airflow webserver" || true
 	pkill -f "airflow scheduler" || true
 	@echo "Airflow остановлен"
+
+# Варианты запуска Airflow
+airflow-sqlite: check-venv
+	@echo " Запуск Airflow SQLite (SequentialExecutor, порт 8081)..."
+	./scripts/airflow/start_airflow_sqlite_8081.sh
+
+airflow-postgres: check-venv
+	@echo " Запуск Airflow PostgreSQL (LocalExecutor, порт 8082)..."
+	./scripts/airflow/start_airflow_postgres_8082.sh
+
+airflow-docker:
+	@echo " Запуск Airflow Docker (LocalExecutor + PostgreSQL, порт 8083)..."
+	./scripts/airflow/start_airflow_docker_8083.sh
+
+airflow-guide:
+	@echo " Показ руководства по запуску Airflow..."
+	./airflow_start_guide.sh
 
 # Тест Airflow DAG
 airflow-test:
@@ -327,11 +369,11 @@ production-ready:
 # Справка по переменным окружения
 env-help:
 	@echo "Переменные окружения:"
-	@echo "  CONFIG_PATH            - Путь к файлу конфигурации"
-	@echo "  LOG_LEVEL              - Уровень логирования"
-	@echo "  AIRFLOW_HOME           - Домашняя папка Airflow"
-	@echo "  GOOGLE_APPLICATION_CREDENTIALS - Путь к GCS credentials"
-	@echo "  AWS_ACCESS_KEY_ID      - AWS Access Key"
-	@echo "  AWS_SECRET_ACCESS_KEY  - AWS Secret Key"
+	@echo " CONFIG_PATH - Путь к файлу конфигурации"
+	@echo " LOG_LEVEL - Уровень логирования"
+	@echo " AIRFLOW_HOME - Домашняя папка Airflow"
+	@echo " GOOGLE_APPLICATION_CREDENTIALS - Путь к GCS credentials"
+	@echo " AWS_ACCESS_KEY_ID - AWS Access Key"
+	@echo " AWS_SECRET_ACCESS_KEY - AWS Secret Key"
 	@echo ""
 	@echo "Скопируйте .env.example в .env и настройте значения"

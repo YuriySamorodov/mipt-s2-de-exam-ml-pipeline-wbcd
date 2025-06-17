@@ -1,0 +1,336 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-06-17T20:25:53.498+0400] {{executor_loader.py:258}} INFO - Loaded executor: LocalExecutor
+[2025-06-17T20:25:53.536+0400] {{scheduler_job_runner.py:950}} INFO - Starting the scheduler
+[2025-06-17T20:25:53.537+0400] {{scheduler_job_runner.py:957}} INFO - Processing each file at most -1 times
+[2025-06-17 20:25:55 +0400] [43573] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 20:25:55 +0400] [43573] [INFO] Listening at: http://[::]:8793 (43573)
+[2025-06-17 20:25:55 +0400] [43573] [INFO] Using worker: sync
+[2025-06-17 20:25:55 +0400] [43587] [INFO] Booting worker with pid: 43587
+[2025-06-17 20:25:55 +0400] [43604] [INFO] Booting worker with pid: 43604
+[2025-06-17T20:25:55.773+0400] {{manager.py:174}} INFO - Launched DagFileProcessorManager with pid: 43620
+[2025-06-17T20:25:55.779+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+[2025-06-17T20:26:07.635+0400] {{settings.py:63}} INFO - Configured default timezone UTC
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+[2025-06-17T20:30:56.003+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:30:56.019+0400] {{scheduler_job_runner.py:1972}} INFO - Marked 1 SchedulerJob instances as failed
+[2025-06-17T20:32:25.205+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:32:24.889955+00:00 [scheduled]>
+[2025-06-17T20:32:25.206+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:32:25.207+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:32:24.889955+00:00 [scheduled]>
+[2025-06-17T20:32:25.211+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:32:24.889955+00:00 [scheduled]>] for executor: Local[2025-06-17T20:43:08.952+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:43:08.976+0400] {{process_utils.py:132}} INFO - Sending 15 to group 43322. PIDs of all processes in the group: []
+[2025-06-17T20:43:08.976+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 43322
+[2025-06-17T20:43:08.977+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 43322 as process group is missing.
+25-06-17T16:32:24.889955+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:35:56.067+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:40:56.222+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:43:08.952+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:43:10.178+0400] {{process_utils.py:132}} INFO - Sending 15 to group 43620. PIDs of all processes in the group: [46196, 46208, 43620]
+[2025-06-17T20:43:10.180+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 43620
+[2025-06-17T20:43:10.408+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=46208, status='terminated', started='20:43:07') (46208) terminated with exit code None
+[2025-06-17T20:43:10.411+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=46196, status='terminated', started='20:43:04') (46196) terminated with exit code None
+[2025-06-17T20:43:10.596+0400] {{process_utils.py:266}} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-06-17T20:43:11.461+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=43620, status='terminated', exitcode=0, started='20:25:55') (43620) terminated with exit code 0
+[2025-06-17T20:43:11.463+0400] {{local_executor.py:423}} INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+[2025-06-17T20:44:36.170+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:44:36.285+0400] {{process_utils.py:132}} INFO - Sending 15 to group 43620. PIDs of all processes in the group: []
+[2025-06-17T20:44:36.286+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 43620
+[2025-06-17T20:44:36.286+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 43620 as process group is missing.
+[2025-06-17 20:44:36 +0400] [43573] [INFO] Handling signal: term
+[2025-06-17 20:44:36 +0400] [43587] [INFO] Worker exiting (pid: 43587)
+[2025-06-17 20:44:36 +0400] [43604] [INFO] Worker exiting (pid: 43604)
+[2025-06-17 20:44:37 +0400] [43573] [INFO] Shutting down: Master

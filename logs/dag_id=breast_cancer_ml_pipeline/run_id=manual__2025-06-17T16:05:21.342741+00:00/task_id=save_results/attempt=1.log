@@ -1,0 +1,39 @@
+[2025-06-17T20:06:53.048+0400] {{local_task_job_runner.py:123}} INFO - ::group::Pre task execution logs
+[2025-06-17T20:06:53.069+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:06:53.079+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:06:53.080+0400] {{taskinstance.py:2867}} INFO - Starting attempt 1 of 3
+[2025-06-17T20:06:53.093+0400] {{taskinstance.py:2890}} INFO - Executing <Task(PythonOperator): save_results> on 2025-06-17 16:05:21.342741+00:00
+[2025-06-17T20:06:53.111+0400] {{logging_mixin.py:190}} WARNING - /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=41492) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-17T20:06:53.114+0400] {{standard_task_runner.py:72}} INFO - Started process 41495 to run task
+[2025-06-17T20:06:53.114+0400] {{standard_task_runner.py:104}} INFO - Running: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'save_results', 'manual__2025-06-17T16:05:21.342741+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/var/folders/1f/q4s2m7nd4h11_dlypgrn202w0000gn/T/tmptsrvvc4k']
+[2025-06-17T20:06:53.123+0400] {{standard_task_runner.py:105}} INFO - Job 8: Subtask save_results
+[2025-06-17T20:06:53.218+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:53.622+0400] {{taskinstance.py:3134}} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@example.com' AIRFLOW_CTX_DAG_OWNER='data-engineer' AIRFLOW_CTX_DAG_ID='breast_cancer_ml_pipeline' AIRFLOW_CTX_TASK_ID='save_results' AIRFLOW_CTX_EXECUTION_DATE='2025-06-17T16:05:21.342741+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-17T16:05:21.342741+00:00'
+[2025-06-17T20:06:53.623+0400] {{taskinstance.py:732}} INFO - ::endgroup::
+[2025-06-17T20:06:53.645+0400] {{logging_mixin.py:190}} INFO - Рабочая директория установлена в: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+[2025-06-17T20:06:53.645+0400] {{ml_pipeline_dag.py:487}} INFO - === НАЧАЛО СОХРАНЕНИЯ РЕЗУЛЬТАТОВ ===
+[2025-06-17T20:06:53.646+0400] {{ml_pipeline_dag.py:491}} INFO - Инициализируем StorageManager...
+[2025-06-17T20:06:53.662+0400] {{storage_manager.py:138}} INFO - Начинаем инициализацию облачных клиентов...
+[2025-06-17T20:06:53.663+0400] {{storage_manager.py:143}} INFO - Инициализируем GCS клиент...
+[2025-06-17T20:06:53.663+0400] {{storage_manager.py:153}} INFO - GCS credentials не найдены, пропускаем инициализацию
+[2025-06-17T20:06:53.664+0400] {{storage_manager.py:158}} INFO - Проверяем AWS S3...
+[2025-06-17T20:06:53.664+0400] {{storage_manager.py:171}} INFO - AWS credentials не найдены
+[2025-06-17T20:06:53.665+0400] {{storage_manager.py:175}} INFO - Инициализация облачных клиентов завершена
+[2025-06-17T20:06:53.666+0400] {{storage_manager.py:131}} INFO - База данных инициализирована: sqlite
+[2025-06-17T20:06:53.667+0400] {{ml_pipeline_dag.py:493}} INFO - StorageManager инициализирован успешно
+[2025-06-17T20:06:53.668+0400] {{ml_pipeline_dag.py:498}} INFO - Собираем данные из XCom...
+[2025-06-17T20:06:53.700+0400] {{storage_manager.py:205}} INFO - Данные сохранены локально: results/complete_pipeline_results_20250617_200653.json
+[2025-06-17T20:06:53.701+0400] {{storage_manager.py:205}} INFO - Данные сохранены локально: results/xcom_save_summary_20250617_200653.json
+[2025-06-17T20:06:53.717+0400] {{ml_pipeline_dag.py:633}} INFO -  Результаты успешно сохранены через XCom интеграцию:
+[2025-06-17T20:06:53.717+0400] {{ml_pipeline_dag.py:634}} INFO -    - Полный отчет: results/complete_pipeline_results_20250617_200653.json
+[2025-06-17T20:06:53.718+0400] {{ml_pipeline_dag.py:635}} INFO -    - Файлов обработано: 7
+[2025-06-17T20:06:53.718+0400] {{ml_pipeline_dag.py:636}} INFO -    - XCom данные полные: True
+[2025-06-17T20:06:53.719+0400] {{ml_pipeline_dag.py:638}} INFO -    - Точность модели: 0.9737
+[2025-06-17T20:06:53.720+0400] {{ml_pipeline_dag.py:639}} INFO -    - F1-score: 0.9736
+[2025-06-17T20:06:53.720+0400] {{ml_pipeline_dag.py:640}} INFO - === СОХРАНЕНИЕ РЕЗУЛЬТАТОВ ЗАВЕРШЕНО ===
+[2025-06-17T20:06:53.721+0400] {{python.py:240}} INFO - Done. Returned value was: {'status': 'success', 'files_saved': 7, 'timestamp': '20250617_200653', 'xcom_integration': True, 'results_path': 'results/complete_pipeline_results_20250617_200653.json', 'data_complete': True}
+[2025-06-17T20:06:53.732+0400] {{taskinstance.py:341}} INFO - ::group::Post task execution logs
+[2025-06-17T20:06:53.733+0400] {{taskinstance.py:353}} INFO - Marking task as SUCCESS. dag_id=breast_cancer_ml_pipeline, task_id=save_results, run_id=manual__2025-06-17T16:05:21.342741+00:00, execution_date=20250617T160521, start_date=20250617T160653, end_date=20250617T160653
+[2025-06-17T20:06:53.801+0400] {{local_task_job_runner.py:266}} INFO - Task exited with return code 0
+[2025-06-17T20:06:53.830+0400] {{taskinstance.py:3901}} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-17T20:06:53.832+0400] {{local_task_job_runner.py:245}} INFO - ::endgroup::

@@ -1,12 +1,12 @@
 {
-  "pipeline_info": {
-    "dag_id": "breast_cancer_ml_pipeline",
-    "run_id": "__airflow_temporary_run_2025-06-15T22:00:10.154255+00:00__",
-    "logical_date": "2024-01-01T00:00:00+00:00",
-    "start_date": null
-  },
-  "data_analysis": null,
-  "preprocessing": null,
-  "training": null,
-  "evaluation": null
+"pipeline_info": {
+"dag_id": "breast_cancer_ml_pipeline",
+"run_id": "__airflow_temporary_run_2025-06-15T22:00:10.154255+00:00__",
+"logical_date": "2024-01-01T00:00:00+00:00",
+"start_date": null
+},
+"data_analysis": null,
+"preprocessing": null,
+"training": null,
+"evaluation": null
 }

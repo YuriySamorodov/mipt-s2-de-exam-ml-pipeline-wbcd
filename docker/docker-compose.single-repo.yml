@@ -1,0 +1,116 @@
+version: '3.8'
+
+# Загружаем два образа из одного Docker Hub репозитория
+
+services:
+# PostgreSQL Database
+postgres:
+image: yuriysamorodov/mipt-s2-de-ml-pipeline:postgres-latest
+container_name: ml-pipeline-postgres
+restart: unless-stopped
+environment:
+POSTGRES_DB: airflow
+POSTGRES_USER: airflow
+POSTGRES_PASSWORD: airflow
+POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+volumes:
+- postgres_data:/var/lib/postgresql/data
+- postgres_logs:/var/log/postgresql
+ports:
+- "5433:5432" # Используем внешний порт 5433 для избежания конфликта с локальным PostgreSQL
+networks:
+- ml-pipeline-network
+healthcheck:
+test: ["CMD-SHELL", "pg_isready -U airflow -d airflow"]
+interval: 10s
+timeout: 5s
+retries: 5
+start_period: 30s
+labels:
+- "ml-pipeline.component=database"
+- "ml-pipeline.service=postgresql"
+
+# Apache Airflow
+airflow:
+image: yuriysamorodov/mipt-s2-de-ml-pipeline:airflow-latest
+container_name: ml-pipeline-airflow
+restart: unless-stopped
+depends_on:
+postgres:
+condition: service_healthy
+environment:
+# Database connection
+AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+
+# Core settings
+AIRFLOW__CORE__EXECUTOR: LocalExecutor
+AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
+AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'True'
+AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: 1
+
+# Web server settings
+AIRFLOW__WEBSERVER__WEB_SERVER_PORT: 8082
+AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'True'
+AIRFLOW__WEBSERVER__RBAC: 'True'
+
+# Security
+AIRFLOW__WEBSERVER__SECRET_KEY: ml-pipeline-secret-key-change-in-production
+
+# Scheduler settings
+AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 300
+AIRFLOW__SCHEDULER__CATCHUP_BY_DEFAULT: 'False'
+
+# Logging
+AIRFLOW__LOGGING__LOGGING_LEVEL: INFO
+AIRFLOW__LOGGING__BASE_LOG_FOLDER: /opt/airflow/logs
+
+# ML Pipeline specific
+ML_PIPELINE_DATA_PATH: /opt/airflow/data
+ML_PIPELINE_RESULTS_PATH: /opt/airflow/results
+volumes:
+- airflow_logs:/opt/airflow/logs
+- airflow_results:/opt/airflow/results
+- airflow_dags:/opt/airflow/dags
+ports:
+- "8083:8082"
+networks:
+- ml-pipeline-network
+healthcheck:
+test: ["CMD-SHELL", "curl --fail http://localhost:8082/health || exit 1"]
+interval: 30s
+timeout: 10s
+retries: 3
+start_period: 60s
+labels:
+- "ml-pipeline.component=orchestrator"
+- "ml-pipeline.service=airflow"
+
+# Persistent volumes
+volumes:
+postgres_data:
+driver: local
+labels:
+- "ml-pipeline.volume=database"
+postgres_logs:
+driver: local
+labels:
+- "ml-pipeline.volume=database-logs"
+airflow_logs:
+driver: local
+labels:
+- "ml-pipeline.volume=airflow-logs"
+airflow_results:
+driver: local
+labels:
+- "ml-pipeline.volume=results"
+airflow_dags:
+driver: local
+labels:
+- "ml-pipeline.volume=dags"
+
+# Network for inter-service communication
+networks:
+ml-pipeline-network:
+driver: bridge
+labels:
+- "ml-pipeline.network=main"

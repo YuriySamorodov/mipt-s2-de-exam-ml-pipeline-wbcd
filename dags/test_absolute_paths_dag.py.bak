@@ -1,0 +1,120 @@
+"""
+Простой тестовый DAG для проверки работы Airflow с абсолютными путями
+"""
+
+from datetime import datetime, timedelta
+from airflow import DAG
+from airflow.operators.bash import BashOperator
+from airflow.operators.python import PythonOperator
+import os
+
+# Конфигурация DAG
+default_args = {
+'owner': 'airflow',
+'depends_on_past': False,
+'start_date': datetime(2025, 1, 1),
+'email_on_failure': False,
+'email_on_retry': False,
+'retries': 1,
+'retry_delay': timedelta(minutes=5),
+}
+
+# Создание DAG
+dag = DAG(
+'test_absolute_paths_dag',
+default_args=default_args,
+description='Тестовый DAG для проверки работы с абсолютными путями',
+schedule_interval=timedelta(days=1),
+catchup=False,
+tags=['test', 'absolute_paths'],
+)
+
+def print_environment_info():
+"""Функция для вывода информации об окружении"""
+print(" Информация об окружении:")
+print(f" Текущая директория: {os.getcwd()}")
+print(f" AIRFLOW_HOME: {os.environ.get('AIRFLOW_HOME', 'НЕ УСТАНОВЛЕН')}")
+print(f" DAGs папка: {os.environ.get('AIRFLOW__CORE__DAGS_FOLDER', 'НЕ УСТАНОВЛЕНА')}")
+print(f" Логи папка: {os.environ.get('AIRFLOW__LOGGING__BASE_LOG_FOLDER', 'НЕ УСТАНОВЛЕНА')}")
+print(f" БД подключение: {os.environ.get('AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'НЕ УСТАНОВЛЕНО')}")
+print(" Тест окружения завершен!")
+
+def test_absolute_paths():
+"""Тестирование абсолютных путей"""
+import sqlite3
+from pathlib import Path
+
+# Получаем путь к базе данных из переменной окружения
+db_conn = os.environ.get('AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', '')
+
+if db_conn.startswith('sqlite:///'):
+db_path = db_conn.replace('sqlite:///', '')
+print(f" Путь к базе данных: {db_path}")
+
+# Проверяем, что путь абсолютный
+if Path(db_path).is_absolute():
+print(" Путь к базе данных является абсолютным!")
+else:
+print(" Путь к базе данных НЕ является абсолютным!")
+
+# Проверяем существование файла базы данных
+if Path(db_path).exists():
+print(" Файл базы данных существует!")
+
+# Проверяем размер файла
+size = Path(db_path).stat().st_size
+print(f" Размер базы данных: {size} байт")
+
+# Проверяем подключение к базе данных
+try:
+conn = sqlite3.connect(db_path)
+cursor = conn.cursor()
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+tables = cursor.fetchall()
+print(f" Количество таблиц в БД: {len(tables)}")
+conn.close()
+print(" Подключение к базе данных работает!")
+except Exception as e:
+print(f" Ошибка подключения к БД: {e}")
+else:
+print(" Файл базы данных НЕ существует!")
+else:
+print(f" Используется не SQLite: {db_conn}")
+
+# Задача для вывода информации об окружении
+environment_info_task = PythonOperator(
+task_id='print_environment_info',
+python_callable=print_environment_info,
+dag=dag,
+)
+
+# Задача для тестирования абсолютных путей
+test_paths_task = PythonOperator(
+task_id='test_absolute_paths',
+python_callable=test_absolute_paths,
+dag=dag,
+)
+
+# Простая bash задача
+bash_task = BashOperator(
+task_id='test_bash_task',
+bash_command='echo " Тестовая bash задача выполнена успешно! Текущая директория: $(pwd)"',
+dag=dag,
+)
+
+# Проверка переменных окружения через bash
+env_check_task = BashOperator(
+task_id='check_environment_variables',
+bash_command='''
+echo " Проверка переменных окружения:"
+echo " AIRFLOW_HOME: $AIRFLOW_HOME"
+echo " AIRFLOW__CORE__DAGS_FOLDER: $AIRFLOW__CORE__DAGS_FOLDER"
+echo " AIRFLOW__LOGGING__BASE_LOG_FOLDER: $AIRFLOW__LOGGING__BASE_LOG_FOLDER"
+echo " AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: $AIRFLOW__DATABASE__SQL_ALCHEMY_CONN"
+echo " Проверка переменных окружения завершена!"
+''',
+dag=dag,
+)
+
+# Настройка зависимостей
+environment_info_task >> test_paths_task >> bash_task >> env_check_task

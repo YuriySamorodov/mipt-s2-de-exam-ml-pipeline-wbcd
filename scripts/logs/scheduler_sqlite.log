@@ -1,0 +1,42 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/bin/airflow", line 10, in <module>
+    sys.exit(main())
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/__main__.py", line 57, in main
+    args.func(args)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/utils/cli.py", line 112, in wrapper
+    check_and_run_migrations()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/utils/db.py", line 823, in check_and_run_migrations
+    source_heads = set(env.script.get_heads())
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/script/base.py", line 379, in get_heads
+    return list(self.revision_map.heads)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1113, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/script/revision.py", line 155, in heads
+    self._revision_map
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1113, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/script/revision.py", line 209, in _revision_map
+    for revision in self._generator():
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/script/base.py", line 159, in _load_revisions
+    script = Script._from_path(self, real_path)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/script/base.py", line 1035, in _from_path
+    module = util.load_python_file(dir_, filename)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/util/pyfiles.py", line 114, in load_python_file
+    module = load_module_py(module_id, path)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/alembic/util/pyfiles.py", line 134, in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/migrations/versions/0074_2_0_0_resource_based_permissions.py", line 30, in <module>
+    from airflow.www.app import cached_app
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/www/app.py", line 50, in <module>
+    from airflow.www.extensions.init_session import init_airflow_session_interface
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/www/extensions/init_session.py", line 23, in <module>
+    from airflow.www.session import AirflowDatabaseSessionInterface, AirflowSecureCookieSessionInterface
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/scripts/venv/lib/python3.9/site-packages/airflow/www/session.py", line 21, in <module>
+    from flask_session.sessions import SqlAlchemySessionInterface
+ModuleNotFoundError: No module named 'flask_session.sessions'

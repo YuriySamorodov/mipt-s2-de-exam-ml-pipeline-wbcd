@@ -68,7 +68,7 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# # Environments
 .env
 .venv
 env/
@@ -95,20 +95,21 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Airflow
-airflow.cfg
-airflow_login.py
-airflow.db
-webserver_config.py
-unittests.cfg
-logs/
-standalone_admin_password.txt
+# Оставляем на всякий случай
+# # Airflow
+# airflow.cfg
+# airflow_login.py
+# airflow.db
+# webserver_config.py
+# unittests.cfg
+# logs/
+# standalone_admin_password.txt
 
-# Данные и результаты
-data/*.csv
-results/models/*.pkl
-results/models/*.joblib
-logs/*.log
+# # Данные и результаты
+# data/*.csv
+# results/models/*.pkl
+# results/models/*.joblib
+# logs/*.log
 
 # Credentials
 config/*credentials*.json
@@ -131,24 +132,24 @@ Thumbs.db
 *.h5
 *.model
 
-# Docker images export files
-docker-images/*.tar
-docker-images/*.tar.gz
-docker-images/*.tar.xz
-docker-images/*_info.txt
+# # Docker images export files
+# docker-images/*.tar
+# docker-images/*.tar.gz
+# docker-images/*.tar.xz
+# docker-images/*_info.txt
 
 # Docker build cache
 .docker/
 
-# Screenshots (exclude actual image files but keep structure)
-screenshots/**/*.png
-screenshots/**/*.jpg
-screenshots/**/*.jpeg
-screenshots/**/*.gif
-screenshots/**/*.bmp
-screenshots/**/*.tiff
-screenshots/**/*.webp
+# # Screenshots (exclude actual image files but keep structure)
+# screenshots/**/*.png
+# screenshots/**/*.jpg
+# screenshots/**/*.jpeg
+# screenshots/**/*.gif
+# screenshots/**/*.bmp
+# screenshots/**/*.tiff
+# screenshots/**/*.webp
 
-# Keep README and placeholder files in screenshots
-!screenshots/**/README.md
-!screenshots/**/.placeholder.md
+# # Keep README and placeholder files in screenshots
+# !screenshots/**/README.md
+# !screenshots/**/.placeholder.md

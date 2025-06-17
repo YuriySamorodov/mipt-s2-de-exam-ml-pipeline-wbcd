@@ -1,0 +1,236 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-06-17T20:45:24.232+0400] {{executor_loader.py:258}} INFO - Loaded executor: LocalExecutor
+[2025-06-17T20:45:24.267+0400] {{scheduler_job_runner.py:950}} INFO - Starting the scheduler
+[2025-06-17T20:45:24.268+0400] {{scheduler_job_runner.py:957}} INFO - Processing each file at most -1 times
+[2025-06-17 20:45:26 +0400] [46519] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 20:45:26 +0400] [46519] [INFO] Listening at: http://[::]:8793 (46519)
+[2025-06-17 20:45:26 +0400] [46519] [INFO] Using worker: sync
+[2025-06-17T20:45:26.030+0400] {{manager.py:174}} INFO - Launched DagFileProcessorManager with pid: 46524
+[2025-06-17T20:45:26.033+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17 20:45:26 +0400] [46525] [INFO] Booting worker with pid: 46525
+[2025-06-17T20:45:26.054+0400] {{scheduler_job_runner.py:1972}} INFO - Marked 1 SchedulerJob instances as failed
+[2025-06-17T20:45:26.070+0400] {{scheduler_job_runner.py:2012}} INFO - Reset the following 1 orphaned TaskInstances:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:39:07.641074+00:00 [queued]>
+[2025-06-17 20:45:26 +0400] [46526] [INFO] Booting worker with pid: 46526
+[2025-06-17T20:45:26.180+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:39:07.641074+00:00 [scheduled]>
+[2025-06-17T20:45:26.181+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/4 running and queued tasks
+[2025-06-17T20:45:26.181+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:39:07.641074+00:00 [scheduled]>
+[2025-06-17T20:45:26.199+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:39:07.641074+00:00 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+[2025-06-17T20:45:26.200+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T16:39:07.641074+00:00', try_number=2, map_index=-1) to LocalExecutor with priority 8 and queue default
+[2025-06-17T20:45:26.200+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'health_check', 'manual__2025-06-17T16:39:07.641074+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:45:26.232+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:27.269+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+[2025-06-17T20:45:27.900+0400] {{settings.py:63}} INFO - Configured default timezone UTC
+[2025-06-17T20:45:28.316+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:29.463+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:30.569+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:31.121+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:32.176+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:33.222+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:34.301+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:35.359+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:36.119+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:37.206+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:38.262+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:39.321+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:40.511+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:41.125+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:41.199+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:42.265+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:43.328+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:44.372+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:45.422+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:46.182+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:46.253+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:47.316+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:48.375+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:49.427+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:50.503+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:51.319+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:52.401+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:53.459+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:54.521+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:55.575+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:56.181+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:56.252+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:56.409+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:57.475+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:58.526+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:45:59.577+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:00.630+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:01.479+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:02.560+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:03.627+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:04.701+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:05.762+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:06.318+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:06.552+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:07.627+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:08.679+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:09.729+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:10.777+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:11.256+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:11.630+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:12.718+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:13.780+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:14.851+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:15.916+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:16.402+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:16.712+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:17.779+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:18.849+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:19.918+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:21.001+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:21.809+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:22.903+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:23.969+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:25.029+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:26.079+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:26.321+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:26.469+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:26.904+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:27.977+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:29.049+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:30.317+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:31.403+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:31.977+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:33.055+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:34.149+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:35.215+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:36.299+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:36.552+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:37.064+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:38.159+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:39.228+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:40.301+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:41.369+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:42.158+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:43.231+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:44.303+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:45.370+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:46.452+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:46.627+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:47.250+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:48.352+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:49.430+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:50.502+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:51.571+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:52.331+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:53.407+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:54.473+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:55.550+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:56.456+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:56.707+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:57.407+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:58.481+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:46:59.551+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:00.625+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:01.681+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:02.518+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:03.650+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:04.730+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:06.029+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:06.853+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:07.648+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:08.727+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:09.803+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:10.912+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:11.559+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:12.662+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:13.763+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:14.864+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:15.958+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:16.953+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:17.751+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:18.830+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:19.903+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:20.975+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:22.066+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:22.843+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:23.933+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:25.019+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:26.111+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:26.663+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:27.036+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:28.113+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:29.213+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:30.293+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:31.381+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:32.476+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:33.201+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:34.305+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:35.427+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:36.502+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:37.125+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:38.202+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:38.326+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:39.425+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:40.498+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:41.575+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:41.741+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:42.837+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:43.404+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:44.492+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:45.573+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:46.654+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:47.202+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:48.289+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:48.490+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:49.589+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:50.675+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:51.745+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:52.825+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:53.589+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:54.690+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:55.775+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:56.839+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:57.279+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:58.394+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:58.697+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:47:59.789+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:00.880+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:01.950+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:03.044+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:03.792+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:05.260+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:06.347+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:07.361+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:08.444+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:08.909+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:10.007+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:11.092+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:11.941+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:13.020+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:14.010+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:15.106+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T20:48:15.513+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:48:16.159+0400] {{process_utils.py:266}} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-06-17T20:48:16.561+0400] {{process_utils.py:132}} INFO - Sending 15 to group 46524. PIDs of all processes in the group: [46524]
+[2025-06-17T20:48:16.562+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 46524
+[2025-06-17T20:48:16.594+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=46524, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='20:45:26') (46524) terminated with exit code -15
+[2025-06-17T20:48:16.595+0400] {{local_executor.py:423}} INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+[2025-06-17T20:51:17.942+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:51:18.037+0400] {{process_utils.py:132}} INFO - Sending 15 to group 46524. PIDs of all processes in the group: []
+[2025-06-17T20:51:18.038+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 46524
+[2025-06-17T20:51:18.039+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 46524 as process group is missing.
+[2025-06-17 20:51:18 +0400] [46519] [INFO] Handling signal: term
+[2025-06-17 20:51:18 +0400] [46525] [INFO] Worker exiting (pid: 46525)
+[2025-06-17 20:51:18 +0400] [46526] [INFO] Worker exiting (pid: 46526)
+[2025-06-17 20:51:18 +0400] [46519] [INFO] Shutting down: Master

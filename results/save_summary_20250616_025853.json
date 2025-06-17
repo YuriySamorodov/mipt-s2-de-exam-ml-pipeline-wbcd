@@ -1,11 +1,11 @@
 {
-  "timestamp": "20250616_025853",
-  "files_saved": [
-    "results/final_model_20250616_025853.joblib",
-    "results/final_metrics_20250616_025853.json",
-    "results/pipeline_results_20250616_025853.json"
-  ],
-  "local_save_success": true,
-  "total_files": 3,
-  "note": "Упрощенный режим сохранения для стабильности Airflow"
+"timestamp": "20250616_025853",
+"files_saved": [
+"results/final_model_20250616_025853.joblib",
+"results/final_metrics_20250616_025853.json",
+"results/pipeline_results_20250616_025853.json"
+],
+"local_save_success": true,
+"total_files": 3,
+"note": "Упрощенный режим сохранения для стабильности Airflow"
 }

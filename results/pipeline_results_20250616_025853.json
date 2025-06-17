@@ -1,14 +1,14 @@
 {
-  "pipeline_info": {
-    "dag_id": "breast_cancer_ml_pipeline",
-    "run_id": "manual__2025-06-15T22:57:55+00:00",
-    "logical_date": "2025-06-15T22:57:55+00:00",
-    "start_date": "2025-06-15T22:57:56.746512+00:00",
-    "timestamp": "20250616_025853"
-  },
-  "note": "Данные собраны из файловой системы для стабильности работы",
-  "files_processed": [
-    "Model: results/models/current_model.joblib -> results/final_model_20250616_025853.joblib",
-    "Metrics: results/metrics.json -> results/final_metrics_20250616_025853.json"
-  ]
+"pipeline_info": {
+"dag_id": "breast_cancer_ml_pipeline",
+"run_id": "manual__2025-06-15T22:57:55+00:00",
+"logical_date": "2025-06-15T22:57:55+00:00",
+"start_date": "2025-06-15T22:57:56.746512+00:00",
+"timestamp": "20250616_025853"
+},
+"note": "Данные собраны из файловой системы для стабильности работы",
+"files_processed": [
+"Model: results/models/current_model.joblib -> results/final_model_20250616_025853.joblib",
+"Metrics: results/metrics.json -> results/final_metrics_20250616_025853.json"
+]
 }

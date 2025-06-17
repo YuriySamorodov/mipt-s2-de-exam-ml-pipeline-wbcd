@@ -1,0 +1,245 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-06-17T21:09:37.154+0400] {{executor_loader.py:258}} INFO - Loaded executor: LocalExecutor
+[2025-06-17T21:09:37.190+0400] {{scheduler_job_runner.py:950}} INFO - Starting the scheduler
+[2025-06-17T21:09:37.191+0400] {{scheduler_job_runner.py:957}} INFO - Processing each file at most -1 times
+[2025-06-17 21:09:38 +0400] [49001] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 21:09:38 +0400] [49001] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:09:38 +0400] [49001] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17T21:09:38.946+0400] {{manager.py:174}} INFO - Launched DagFileProcessorManager with pid: 49010
+[2025-06-17T21:09:38.950+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17 21:09:39 +0400] [49001] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:09:39 +0400] [49001] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+[2025-06-17T21:09:40.778+0400] {{settings.py:63}} INFO - Configured default timezone UTC
+[2025-06-17 21:09:40 +0400] [49001] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:09:40 +0400] [49001] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:09:41 +0400] [49001] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:09:41 +0400] [49001] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:09:42 +0400] [49001] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:09:42 +0400] [49001] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:09:43 +0400] [49001] [ERROR] Can't connect to ('::', 8793)
+[2025-06-17T21:10:16.572+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T17:10:15.385059+00:00 [scheduled]>
+[2025-06-17T21:10:16.573+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:10:16.573+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T17:10:15.385059+00:00 [scheduled]>
+[2025-06-17T21:10:16.576+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T17:10:15.385059+00:00 [scheduled]>] for executor: LocalExecutor(parallelism=1)
+[2025-06-17T21:10:16.577+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T17:10:15.385059+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 8 and queue default
+[2025-06-17T21:10:16.577+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'health_check', 'manual__2025-06-17T17:10:15.385059+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T21:10:16.635+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:17.692+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:18.740+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:19.194+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:19.345+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:20.396+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:21.441+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:22.490+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:23.542+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:24.134+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:24.399+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:25.447+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:26.497+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:27.544+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:28.592+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:29.268+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:29.448+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:30.499+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:31.543+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:32.593+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:33.642+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:34.515+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:35.582+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:36.644+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:37.695+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:38.744+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:39.021+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:39.198+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:39.372+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:39.592+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:40.668+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:41.731+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:42.794+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:43.843+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:44.673+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:45.745+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:46.796+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:47.843+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:48.894+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:49.438+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:49.742+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:50.819+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:51.885+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:52.944+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:53.995+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:54.266+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:54.816+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:55.882+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:56.944+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:57.992+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:59.044+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:59.497+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:10:59.884+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:01.068+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:02.130+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:03.189+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:04.266+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:04.966+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:06.032+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:07.243+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:08.292+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:09.327+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:09.566+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:10.032+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:11.118+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:12.178+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:13.240+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:14.291+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:15.115+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:16.181+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:17.241+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:18.295+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:19.342+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:19.630+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:20.181+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:21.246+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:22.295+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:23.345+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:24.388+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:25.245+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:26.321+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:27.381+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:28.441+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:29.873+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:30.326+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:31.394+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:32.452+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:33.502+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:34.548+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:35.396+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:36.482+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:37.542+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:38.597+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:39.022+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:39.089+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:39.473+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:39.936+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:40.484+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:41.569+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:42.626+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:43.687+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:44.746+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:45.552+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:46.623+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:47.685+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:48.749+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:49.801+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:50.001+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:50.629+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:51.724+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:52.793+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:53.853+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:54.538+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:55.602+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:55.727+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:56.798+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:57.880+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:11:58.944+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:00.010+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:00.057+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:00.803+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:01.891+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:02.955+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:04.029+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:05.097+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:05.888+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:06.956+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:08.008+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:09.058+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:09.604+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:10.181+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:10.980+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:12.077+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:13.142+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:14.206+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:15.256+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:16.078+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:17.146+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:18.207+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:19.257+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:20.251+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:21.180+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:22.258+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:23.306+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:24.357+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:24.684+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:25.755+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:26.255+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:27.335+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:28.393+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:29.457+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:30.330+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:31.359+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:32.433+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:33.495+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:34.558+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:35.606+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:36.433+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:37.499+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:38.557+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:39.153+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:39.752+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:40.395+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:41.483+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:42.552+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:43.604+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:44.656+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:45.707+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:46.551+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:47.629+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:48.689+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:49.746+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:50.459+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:51.529+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:51.644+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:52.729+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:53.790+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:54.808+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:55.855+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:56.729+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:57.799+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:58.856+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:12:59.904+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:00.508+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:01.558+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:01.805+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:02.882+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:03.958+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:05.211+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:13:05.652+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T21:13:06.142+0400] {{process_utils.py:266}} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-06-17T21:13:06.606+0400] {{process_utils.py:132}} INFO - Sending 15 to group 49010. PIDs of all processes in the group: []
+[2025-06-17T21:13:06.607+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 49010
+[2025-06-17T21:13:06.607+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 49010 as process group is missing.
+[2025-06-17T21:13:06.608+0400] {{local_executor.py:423}} INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [2025-06-17T21:13:05.652+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T21:13:05.697+0400] {{process_utils.py:132}} INFO - Sending 15 to group 47531. PIDs of all processes in the group: []
+[2025-06-17T21:13:05.697+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 47531
+[2025-06-17T21:13:05.698+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 47531 as process group is missing.
+[2025-06-17 21:13:05 +0400] [47520] [INFO] Handling signal: term
+[2025-06-17 21:13:05 +0400] [47533] [INFO] Worker exiting (pid: 47533)
+[2025-06-17 21:13:05 +0400] [47532] [INFO] Worker exiting (pid: 47532)
+[2025-06-17 21:13:06 +0400] [47520] [INFO] Shutting down: Master

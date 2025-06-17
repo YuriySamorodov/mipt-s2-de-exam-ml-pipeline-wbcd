@@ -1,0 +1,117 @@
+Запуск Airflow PostgreSQL (LocalExecutor, порт 8082)...
+Запуск Airflow PostgreSQL с программным формированием абсолютных путей
+Режим: PostgreSQL + LocalExecutor (порт 8082)
+
+Директория проекта: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+Активация виртуального окружения...
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+Версия Airflow: 2.10.5
+Остановка текущих процессов Airflow...
+Настройка конфигурации PostgreSQL с абсолютными путями...
+/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/../../setup_airflow_config.py': [Errno 2] No such file or directory
+AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+Проверка подключения к PostgreSQL...
+Инициализация базы данных PostgreSQL...
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py:55 DeprecationWarning: `db init` is deprecated. Use `db migrate` instead to migrate the db and/or airflow connections create-default-connections to create the default connections
+DB: postgresql+psycopg2://airflow:***@localhost:5432/airflow
+[2025-06-17T20:23:43.763+0400] {{migration.py:207}} INFO - Context impl PostgresqlImpl.
+[2025-06-17T20:23:43.765+0400] {{migration.py:210}} INFO - Will assume transactional DDL.
+INFO [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO [alembic.runtime.migration] Will assume transactional DDL.
+INFO [alembic.runtime.migration] Running stamp_revision -> 5f2621c13b39
+WARNI [airflow.models.crypto] empty cryptography key - values will not be stored encrypted.
+Initialization done
+Создание пользователя admin...
+[2025-06-17T20:23:48.527+0400] {{override.py:1508}} INFO - Inserted Role: Admin
+[2025-06-17T20:23:48.581+0400] {{override.py:965}} WARNING - No user yet created, use flask fab command to do it.
+[2025-06-17T20:23:48.674+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Passwords
+[2025-06-17T20:23:48.699+0400] {{override.py:1963}} INFO - Added Permission can edit on Passwords to role Admin
+[2025-06-17T20:23:48.715+0400] {{override.py:1912}} INFO - Created Permission View: can read on Passwords
+[2025-06-17T20:23:48.726+0400] {{override.py:1963}} INFO - Added Permission can read on Passwords to role Admin
+[2025-06-17T20:23:48.767+0400] {{override.py:1912}} INFO - Created Permission View: can edit on My Password
+[2025-06-17T20:23:48.776+0400] {{override.py:1963}} INFO - Added Permission can edit on My Password to role Admin
+[2025-06-17T20:23:48.799+0400] {{override.py:1912}} INFO - Created Permission View: can read on My Password
+[2025-06-17T20:23:48.804+0400] {{override.py:1963}} INFO - Added Permission can read on My Password to role Admin
+[2025-06-17T20:23:48.815+0400] {{override.py:1912}} INFO - Created Permission View: can edit on My Profile
+[2025-06-17T20:23:48.819+0400] {{override.py:1963}} INFO - Added Permission can edit on My Profile to role Admin
+[2025-06-17T20:23:48.824+0400] {{override.py:1912}} INFO - Created Permission View: can read on My Profile
+[2025-06-17T20:23:48.827+0400] {{override.py:1963}} INFO - Added Permission can read on My Profile to role Admin
+[2025-06-17T20:23:48.903+0400] {{override.py:1912}} INFO - Created Permission View: can create on Users
+[2025-06-17T20:23:48.907+0400] {{override.py:1963}} INFO - Added Permission can create on Users to role Admin
+[2025-06-17T20:23:48.913+0400] {{override.py:1912}} INFO - Created Permission View: can read on Users
+[2025-06-17T20:23:48.916+0400] {{override.py:1963}} INFO - Added Permission can read on Users to role Admin
+[2025-06-17T20:23:48.921+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Users
+[2025-06-17T20:23:48.925+0400] {{override.py:1963}} INFO - Added Permission can edit on Users to role Admin
+[2025-06-17T20:23:48.930+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Users
+[2025-06-17T20:23:48.950+0400] {{override.py:1963}} INFO - Added Permission can delete on Users to role Admin
+[2025-06-17T20:23:48.970+0400] {{override.py:1912}} INFO - Created Permission View: menu access on List Users
+[2025-06-17T20:23:48.974+0400] {{override.py:1963}} INFO - Added Permission menu access on List Users to role Admin
+[2025-06-17T20:23:49.003+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Security
+[2025-06-17T20:23:49.008+0400] {{override.py:1963}} INFO - Added Permission menu access on Security to role Admin
+[2025-06-17T20:23:49.056+0400] {{override.py:1912}} INFO - Created Permission View: can create on Roles
+[2025-06-17T20:23:49.061+0400] {{override.py:1963}} INFO - Added Permission can create on Roles to role Admin
+[2025-06-17T20:23:49.067+0400] {{override.py:1912}} INFO - Created Permission View: can read on Roles
+[2025-06-17T20:23:49.071+0400] {{override.py:1963}} INFO - Added Permission can read on Roles to role Admin
+[2025-06-17T20:23:49.078+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Roles
+[2025-06-17T20:23:49.082+0400] {{override.py:1963}} INFO - Added Permission can edit on Roles to role Admin
+[2025-06-17T20:23:49.104+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Roles
+[2025-06-17T20:23:49.108+0400] {{override.py:1963}} INFO - Added Permission can delete on Roles to role Admin
+[2025-06-17T20:23:49.128+0400] {{override.py:1912}} INFO - Created Permission View: menu access on List Roles
+[2025-06-17T20:23:49.150+0400] {{override.py:1963}} INFO - Added Permission menu access on List Roles to role Admin
+[2025-06-17T20:23:49.168+0400] {{override.py:1912}} INFO - Created Permission View: can read on User Stats Chart
+[2025-06-17T20:23:49.172+0400] {{override.py:1963}} INFO - Added Permission can read on User Stats Chart to role Admin
+[2025-06-17T20:23:49.199+0400] {{override.py:1912}} INFO - Created Permission View: menu access on User's Statistics
+[2025-06-17T20:23:49.204+0400] {{override.py:1963}} INFO - Added Permission menu access on User's Statistics to role Admin
+[2025-06-17T20:23:49.257+0400] {{override.py:1912}} INFO - Created Permission View: can read on Permissions
+[2025-06-17T20:23:49.261+0400] {{override.py:1963}} INFO - Added Permission can read on Permissions to role Admin
+[2025-06-17T20:23:49.272+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Actions
+[2025-06-17T20:23:49.277+0400] {{override.py:1963}} INFO - Added Permission menu access on Actions to role Admin
+[2025-06-17T20:23:49.313+0400] {{override.py:1912}} INFO - Created Permission View: can read on View Menus
+[2025-06-17T20:23:49.318+0400] {{override.py:1963}} INFO - Added Permission can read on View Menus to role Admin
+[2025-06-17T20:23:49.329+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Resources
+[2025-06-17T20:23:49.350+0400] {{override.py:1963}} INFO - Added Permission menu access on Resources to role Admin
+[2025-06-17T20:23:49.405+0400] {{override.py:1912}} INFO - Created Permission View: can read on Permission Views
+[2025-06-17T20:23:49.409+0400] {{override.py:1963}} INFO - Added Permission can read on Permission Views to role Admin
+[2025-06-17T20:23:49.420+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Permission Pairs
+[2025-06-17T20:23:49.424+0400] {{override.py:1963}} INFO - Added Permission menu access on Permission Pairs to role Admin
+[2025-06-17T20:23:49.803+0400] {{override.py:1597}} INFO - Added user admin
+User "admin" created with role "Admin"
+Установка переменных окружения с абсолютными путями...
+
+Запуск сервисов Airflow PostgreSQL...
+Запуск Scheduler...
+Scheduler запущен (PID: 43263)
+/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/../../set_absolute_paths_env.py': [Errno 2] No such file or directory
+Запуск Webserver на порту 8082...
+Webserver запущен (PID: 43284)
+
+Airflow PostgreSQL запущен успешно!
+
+Информация о системе:
+Web UI: http://localhost:8082
+Логин: admin
+Пароль: admin
+База данных: PostgreSQL (localhost:5432)
+Исполнитель: LocalExecutor
+
+Логи:
+Scheduler: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs/scheduler_postgres.log
+Webserver: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs/webserver_postgres.log
+
+Для остановки используйте: ./stop_airflow_postgres.sh
+
+⏳ Ожидание готовности webserver (30 секунд)...
+Проверка готовности сервисов...
+Webserver готов: http://localhost:8082
+
+Система готова к работе!
+
+Все пути сформированы программно и являются абсолютными:
+Проект: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+База данных: PostgreSQL (postgresql+psycopg2://airflow:airflow@localhost:5432/airflow)
+DAGs: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+Логи: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs

@@ -1,0 +1,31 @@
+[2025-06-17T19:12:46.171+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-17T19:12:46.190+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T19:12:23.474875+00:00 [queued]>
+[2025-06-17T19:12:46.200+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T19:12:23.474875+00:00 [queued]>
+[2025-06-17T19:12:46.200+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-06-17T19:12:46.212+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): cleanup> on 2025-06-17 19:12:23.474875+00:00
+[2025-06-17T19:12:46.224+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'cleanup', 'manual__2025-06-17T19:12:23.474875+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmpopsrho36']
+[2025-06-17T19:12:46.227+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask cleanup
+[2025-06-17T19:12:46.227+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=740) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-17T19:12:46.229+0000] {standard_task_runner.py:72} INFO - Started process 757 to run task
+[2025-06-17T19:12:46.274+0000] {task_command.py:467} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T19:12:23.474875+00:00 [running]> on host c0169c9bc5ba
+[2025-06-17T19:12:46.347+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@example.com' AIRFLOW_CTX_DAG_OWNER='data-engineer' AIRFLOW_CTX_DAG_ID='breast_cancer_ml_pipeline' AIRFLOW_CTX_TASK_ID='cleanup' AIRFLOW_CTX_EXECUTION_DATE='2025-06-17T19:12:23.474875+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-17T19:12:23.474875+00:00'
+[2025-06-17T19:12:46.349+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-06-17T19:12:46.363+0000] {logging_mixin.py:190} INFO - Рабочая директория установлена в: /opt/***
+[2025-06-17T19:12:46.363+0000] {ml_pipeline_dag.py:677} INFO - === НАЧАЛО ОЧИСТКИ ===
+[2025-06-17T19:12:46.373+0000] {storage_manager.py:138} INFO - Начинаем инициализацию облачных клиентов...
+[2025-06-17T19:12:46.374+0000] {storage_manager.py:143} INFO - Инициализируем GCS клиент...
+[2025-06-17T19:12:46.374+0000] {storage_manager.py:153} INFO - GCS credentials не найдены, пропускаем инициализацию
+[2025-06-17T19:12:46.375+0000] {storage_manager.py:158} INFO - Проверяем AWS S3...
+[2025-06-17T19:12:46.375+0000] {storage_manager.py:171} INFO - AWS credentials не найдены
+[2025-06-17T19:12:46.375+0000] {storage_manager.py:175} INFO - Инициализация облачных клиентов завершена
+[2025-06-17T19:12:46.376+0000] {storage_manager.py:131} INFO - База данных инициализирована: sqlite
+[2025-06-17T19:12:46.384+0000] {storage_manager.py:499} INFO - Очистка старых результатов (старше 30 дней)
+[2025-06-17T19:12:46.426+0000] {storage_manager.py:523} INFO - Очистка завершена. Удалено файлов: 0
+[2025-06-17T19:12:46.426+0000] {ml_pipeline_dag.py:686} INFO - Очистка завершена. Удалено файлов: 0
+[2025-06-17T19:12:46.426+0000] {ml_pipeline_dag.py:687} INFO - === ОЧИСТКА ЗАВЕРШЕНА ===
+[2025-06-17T19:12:46.427+0000] {python.py:240} INFO - Done. Returned value was: {'status': 'success', 'deleted_files': 0, 'max_age_days': 30}
+[2025-06-17T19:12:46.447+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-06-17T19:12:46.447+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=breast_cancer_ml_pipeline, task_id=cleanup, run_id=manual__2025-06-17T19:12:23.474875+00:00, execution_date=20250617T191223, start_date=20250617T191246, end_date=20250617T191246
+[2025-06-17T19:12:46.497+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-17T19:12:46.514+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-17T19:12:46.515+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

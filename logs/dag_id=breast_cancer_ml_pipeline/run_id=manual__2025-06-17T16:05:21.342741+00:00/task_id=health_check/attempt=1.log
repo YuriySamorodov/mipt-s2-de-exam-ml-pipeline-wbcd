@@ -1,0 +1,26 @@
+[2025-06-17T20:05:32.587+0400] {{local_task_job_runner.py:123}} INFO - ::group::Pre task execution logs
+[2025-06-17T20:05:32.603+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:05:32.611+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:05:32.612+0400] {{taskinstance.py:2867}} INFO - Starting attempt 1 of 3
+[2025-06-17T20:05:32.626+0400] {{taskinstance.py:2890}} INFO - Executing <Task(PythonOperator): health_check> on 2025-06-17 16:05:21.342741+00:00
+[2025-06-17T20:05:32.642+0400] {{logging_mixin.py:190}} WARNING - /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=41427) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-17T20:05:32.644+0400] {{standard_task_runner.py:72}} INFO - Started process 41430 to run task
+[2025-06-17T20:05:32.644+0400] {{standard_task_runner.py:104}} INFO - Running: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'health_check', 'manual__2025-06-17T16:05:21.342741+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/var/folders/1f/q4s2m7nd4h11_dlypgrn202w0000gn/T/tmpmga16d1u']
+[2025-06-17T20:05:32.652+0400] {{standard_task_runner.py:105}} INFO - Job 2: Subtask health_check
+[2025-06-17T20:05:32.743+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:05:33.221+0400] {{taskinstance.py:3134}} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@example.com' AIRFLOW_CTX_DAG_OWNER='data-engineer' AIRFLOW_CTX_DAG_ID='breast_cancer_ml_pipeline' AIRFLOW_CTX_TASK_ID='health_check' AIRFLOW_CTX_EXECUTION_DATE='2025-06-17T16:05:21.342741+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-17T16:05:21.342741+00:00'
+[2025-06-17T20:05:33.223+0400] {{taskinstance.py:732}} INFO - ::endgroup::
+[2025-06-17T20:05:33.263+0400] {{logging_mixin.py:190}} INFO - === ПРОВЕРКА СИСТЕМЫ ===
+[2025-06-17T20:05:33.264+0400] {{logging_mixin.py:190}} INFO - Дата и время: 2025-06-17 20:05:33.264264
+[2025-06-17T20:05:33.265+0400] {{logging_mixin.py:190}} INFO - Пользователь: yuriy.samorodov
+[2025-06-17T20:05:33.266+0400] {{logging_mixin.py:190}} INFO - Рабочая директория: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+[2025-06-17T20:05:33.266+0400] {{logging_mixin.py:190}} INFO - Версия Python: 3.12.7 (main, Oct  1 2024, 02:05:46) [Clang 15.0.0 (clang-1500.1.0.2.5)]
+[2025-06-17T20:05:33.267+0400] {{logging_mixin.py:190}} INFO - Платформа: Darwin 22.5.0
+[2025-06-17T20:05:33.268+0400] {{logging_mixin.py:190}} INFO - Архитектура: x86_64
+[2025-06-17T20:05:33.268+0400] {{logging_mixin.py:190}} INFO - === ПРОВЕРКА ЗАВЕРШЕНА ===
+[2025-06-17T20:05:33.269+0400] {{python.py:240}} INFO - Done. Returned value was: {'status': 'success', 'timestamp': '2025-06-17T20:05:33.269239', 'platform': 'Darwin', 'python_version': '3.12.7'}
+[2025-06-17T20:05:33.287+0400] {{taskinstance.py:341}} INFO - ::group::Post task execution logs
+[2025-06-17T20:05:33.288+0400] {{taskinstance.py:353}} INFO - Marking task as SUCCESS. dag_id=breast_cancer_ml_pipeline, task_id=health_check, run_id=manual__2025-06-17T16:05:21.342741+00:00, execution_date=20250617T160521, start_date=20250617T160532, end_date=20250617T160533
+[2025-06-17T20:05:33.375+0400] {{local_task_job_runner.py:266}} INFO - Task exited with return code 0
+[2025-06-17T20:05:33.414+0400] {{taskinstance.py:3901}} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-17T20:05:33.416+0400] {{local_task_job_runner.py:245}} INFO - ::endgroup::

@@ -1,0 +1,248 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-06-17T19:54:16.155+0400] {{executor_loader.py:258}} INFO - Loaded executor: SequentialExecutor
+[2025-06-17T19:54:16.291+0400] {{scheduler_job_runner.py:950}} INFO - Starting the scheduler
+[2025-06-17T19:54:16.292+0400] {{scheduler_job_runner.py:957}} INFO - Processing each file at most -1 times
+[2025-06-17T19:54:16.301+0400] {{manager.py:174}} INFO - Launched DagFileProcessorManager with pid: 40364
+[2025-06-17T19:54:16.304+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17 19:54:18 +0400] [40363] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 19:54:18 +0400] [40363] [INFO] Listening at: http://[::]:8793 (40363)
+[2025-06-17 19:54:18 +0400] [40363] [INFO] Using worker: sync
+[2025-06-17 19:54:18 +0400] [40380] [INFO] Booting worker with pid: 40380
+[2025-06-17 19:54:18 +0400] [40381] [INFO] Booting worker with pid: 40381
+[2025-06-17T19:54:18.633+0400] {{settings.py:63}} INFO - Configured default timezone UTC
+[2025-06-17T19:59:17.595+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:04:21.953+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:05:25.630+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:05:25.631+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:05:25.632+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:05:25.634+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:05:25.635+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 8 and queue default
+[2025-06-17T20:05:25.636+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'health_check', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:25.638+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'health_check', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:28.822+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:05:32.405+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:05:34.221+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:05:34.237+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=health_check, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:05:32.603807+00:00, run_end_date=2025-06-17 16:05:33.288482+00:00, run_duration=0.684675, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=2, pool=default_pool, queue=default, priority_weight=8, operator=PythonOperator, queued_dttm=2025-06-17 16:05:25.632990+00:00, queued_by_job_id=1, pid=41430
+[2025-06-17T20:05:41.939+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:05:41.940+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:05:41.941+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:05:41.944+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:05:41.945+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='load_and_validate_data', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 7 and queue default
+[2025-06-17T20:05:41.945+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'load_and_validate_data', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:41.948+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'load_and_validate_data', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:44.870+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:05:48.169+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:05:50.078+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='load_and_validate_data', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:05:50.088+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=load_and_validate_data, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:05:48.336327+00:00, run_end_date=2025-06-17 16:05:49.212295+00:00, run_duration=0.875968, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=3, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2025-06-17 16:05:41.942322+00:00, queued_by_job_id=1, pid=41448
+[2025-06-17T20:05:54.042+0400] {{scheduler_job_runner.py:435}} INFO - 2 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+	<TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:05:54.043+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:05:54.044+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 1/16 running and queued tasks
+[2025-06-17T20:05:54.045+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+	<TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:05:54.048+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>, <TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:05:54.050+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='preprocess_data', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 5 and queue default
+[2025-06-17T20:05:54.050+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'preprocess_data', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:54.051+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='data_quality_check', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-06-17T20:05:54.052+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'data_quality_check', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:54.055+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'preprocess_data', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:05:56.949+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:06:00.186+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:01.989+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'data_quality_check', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:04.714+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:06:07.856+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:09.894+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='preprocess_data', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:06:09.896+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='data_quality_check', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:06:09.906+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=data_quality_check, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:06:08.018226+00:00, run_end_date=2025-06-17 16:06:09.097395+00:00, run_duration=1.079169, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2025-06-17 16:05:54.046477+00:00, queued_by_job_id=1, pid=41467
+[2025-06-17T20:06:09.907+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=preprocess_data, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:06:00.349971+00:00, run_end_date=2025-06-17 16:06:01.087816+00:00, run_duration=0.737845, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=4, pool=default_pool, queue=default, priority_weight=5, operator=PythonOperator, queued_dttm=2025-06-17 16:05:54.046477+00:00, queued_by_job_id=1, pid=41462
+[2025-06-17T20:06:16.454+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:16.455+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:06:16.455+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:16.457+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:06:16.458+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='train_model', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-06-17T20:06:16.458+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'train_model', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:16.461+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'train_model', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:19.044+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:06:22.409+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:24.368+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='train_model', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:06:24.378+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=train_model, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:06:22.610958+00:00, run_end_date=2025-06-17 16:06:23.463219+00:00, run_duration=0.852261, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=6, pool=default_pool, queue=default, priority_weight=4, operator=PythonOperator, queued_dttm=2025-06-17 16:06:16.456400+00:00, queued_by_job_id=1, pid=41475
+[2025-06-17T20:06:28.637+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:28.638+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:06:28.639+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:28.641+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:06:28.642+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='evaluate_model', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-06-17T20:06:28.642+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'evaluate_model', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:28.645+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'evaluate_model', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:31.458+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:06:35.015+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:39.903+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='evaluate_model', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:06:39.913+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=evaluate_model, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:06:35.187433+00:00, run_end_date=2025-06-17 16:06:39.021540+00:00, run_duration=3.834107, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=7, pool=default_pool, queue=default, priority_weight=3, operator=PythonOperator, queued_dttm=2025-06-17 16:06:28.639778+00:00, queued_by_job_id=1, pid=41486
+[2025-06-17T20:06:46.882+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:46.882+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:06:46.883+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:46.885+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:06:46.886+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='save_results', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-06-17T20:06:46.886+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'save_results', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:46.888+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'save_results', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:49.590+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:06:52.906+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:54.628+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='save_results', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:06:54.638+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=save_results, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:06:53.069787+00:00, run_end_date=2025-06-17 16:06:53.733467+00:00, run_duration=0.66368, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=8, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2025-06-17 16:06:46.883918+00:00, queued_by_job_id=1, pid=41495
+[2025-06-17T20:06:59.221+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:59.222+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/16 running and queued tasks
+[2025-06-17T20:06:59.223+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>
+[2025-06-17T20:06:59.226+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:05:21.342741+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-06-17T20:06:59.227+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='cleanup', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-06-17T20:06:59.227+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'cleanup', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:06:59.230+0400] {{sequential_executor.py:84}} INFO - Executing command: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'cleanup', 'manual__2025-06-17T16:05:21.342741+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T20:07:01.963+0400] {{dagbag.py:588}} INFO - Filling up the DagBag from /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags/ml_pipeline_dag.py
+[2025-06-17T20:07:05.415+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:05:21.342741+00:00 [queued]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:07:07.207+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='cleanup', run_id='manual__2025-06-17T16:05:21.342741+00:00', try_number=1, map_index=-1)
+[2025-06-17T20:07:07.219+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=cleanup, run_id=manual__2025-06-17T16:05:21.342741+00:00, map_index=-1, run_start_date=2025-06-17 16:07:05.582955+00:00, run_end_date=2025-06-17 16:07:06.312774+00:00, run_duration=0.729819, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=2, job_id=9, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2025-06-17 16:06:59.224304+00:00, queued_by_job_id=1, pid=41505
+[2025-06-17T20:07:14.291+0400] {{dagrun.py:854}} INFO - Marking run <DagRun breast_cancer_ml_pipeline @ 2025-06-17 16:05:21.342741+00:00: manual__2025-06-17T16:05:21.342741+00:00, state:running, queued_at: 2025-06-17 16:05:21.387419+00:00. externally triggered: True> successful
+[2025-06-17T20:07:14.292+0400] {{dagrun.py:905}} INFO - DagRun Finished: dag_id=breast_cancer_ml_pipeline, execution_date=2025-06-17 16:05:21.342741+00:00, run_id=manual__2025-06-17T16:05:21.342741+00:00, run_start_date=2025-06-17 16:05:25.579058+00:00, run_end_date=2025-06-17 16:07:14.292746+00:00, run_duration=108.713688, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-06-17 16:05:21.342741+00:00, data_interval_end=2025-06-17 16:05:21.342741+00:00, dag_hash=c9073b96a3a2161ca0e871c164e4215e
+[2025-06-17T20:09:32.175+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17 20:12:08 +0400] [40363] [INFO] Handling signal: term
+[2025-06-17 20:12:08 +0400] [40380] [INFO] Worker exiting (pid: 40380)
+[2025-06-17 20:12:08 +0400] [40381] [INFO] Worker exiting (pid: 40381)
+[2025-06-17 20:12:09 +0400] [40363] [INFO] Shutting down: Master
+[2025-06-17T20:14:35.559+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:19:35.651+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T20:20:46.405+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:20:46.966+0400] {{process_utils.py:266}} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-06-17T20:20:47.450+0400] {{process_utils.py:132}} INFO - Sending 15 to group 40364. PIDs of all processes in the group: [40364]
+[2025-06-17T20:20:47.451+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 40364
+sudo: a password is required
+[2025-06-17T20:20:47.597+0400] {{scheduler_job_runner.py:1016}} ERROR - Exception when executing SchedulerJob._run_scheduler_loop
+Traceback (most recent call last):
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 88, in signal_procs
+    os.killpg(process_group_id, sig)
+PermissionError: [Errno 1] Operation not permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/scheduler_job_runner.py", line 999, in _execute
+    self._run_scheduler_loop()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/scheduler_job_runner.py", line 1134, in _run_scheduler_loop
+    self.processor_agent.wait_until_finished()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 208, in wait_until_finished
+    while self._parent_signal_conn.poll(timeout=None):
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 440, in _poll
+    r = wait([self], timeout)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 1136, in wait
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/scheduler_job_runner.py", line 274, in _exit_gracefully
+    self.processor_agent.end()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 335, in end
+    reap_process_group(self._process.pid, logger=self.log)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 139, in reap_process_group
+    signal_procs(sig)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 93, in signal_procs
+    subprocess.check_call(
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['sudo', '-n', 'kill', '-15', '40364']' returned non-zero exit status 1.
+[2025-06-17T20:20:47.684+0400] {{process_utils.py:132}} INFO - Sending 15 to group 40364. PIDs of all processes in the group: []
+[2025-06-17T20:20:47.685+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 40364
+[2025-06-17T20:20:47.685+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 40364 as process group is missing.
+[2025-06-17T20:20:47.686+0400] {{scheduler_job_runner.py:1029}} INFO - Exited execute loop
+Traceback (most recent call last):
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 88, in signal_procs
+    os.killpg(process_group_id, sig)
+PermissionError: [Errno 1] Operation not permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/bin/airflow", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/__main__.py", line 62, in main
+    args.func(args)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+          ^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/scheduler_job_runner.py", line 999, in _execute
+    self._run_scheduler_loop()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/scheduler_job_runner.py", line 1134, in _run_scheduler_loop
+    self.processor_agent.wait_until_finished()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 208, in wait_until_finished
+    while self._parent_signal_conn.poll(timeout=None):
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 440, in _poll
+    r = wait([self], timeout)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 1136, in wait
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/jobs/scheduler_job_runner.py", line 274, in _exit_gracefully
+    self.processor_agent.end()
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 335, in end
+    reap_process_group(self._process.pid, logger=self.log)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 139, in reap_process_group
+    signal_procs(sig)
+  File "/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 93, in signal_procs
+    subprocess.check_call(
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['sudo', '-n', 'kill', '-15', '40364']' returned non-zero exit status 1.

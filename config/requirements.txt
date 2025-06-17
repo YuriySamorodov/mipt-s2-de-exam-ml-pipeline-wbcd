@@ -1,0 +1,31 @@
+# ML Pipeline Project - Main Requirements
+# This file includes all dependencies for the ML Pipeline project
+
+# Core ML and Data Processing
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Database and Storage
+sqlalchemy>=1.4.0
+psycopg2-binary>=2.9.0
+sqlite3 # Built-in with Python
+
+# Web Framework (for API endpoints)
+flask>=2.2.0
+gunicorn>=20.1.0
+
+# Testing
+pytest>=7.2.0
+pytest-cov>=4.0.0
+
+# Development and Utilities
+python-dotenv>=0.19.0
+click>=8.1.0
+
+# For specific configurations, see:
+# - config/requirements/requirements-airflow.txt (Airflow dependencies)
+# - config/requirements/requirements.minimal.txt (Minimal setup)
+# - config/requirements/requirements.simple.txt (Simple setup)

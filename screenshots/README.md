@@ -6,29 +6,29 @@
 
 ```
 screenshots/
- README.md # Этот файл
- setup/ # Скриншоты установки и настройки
- docker-build.png # Процесс сборки Docker образов
- docker-hub-push.png # Публикация на Docker Hub
- docker-compose-up.png # Запуск через docker-compose
- airflow/ # Скриншоты интерфейса Airflow
- dag-overview.png # Обзор DAG
- dag-graph.png # Граф выполнения DAG
- task-logs.png # Логи выполнения задач
- admin-panel.png # Административная панель
- results/ # Скриншоты результатов ML
- model-metrics.png # Метрики модели
- confusion-matrix.png # Матрица ошибок
- roc-curve.png # ROC кривая
- feature-importance.png # Важность признаков
- database/ # Скриншоты базы данных
- postgres-connection.png # Подключение к PostgreSQL
- data-tables.png # Таблицы с данными
- query-results.png # Результаты запросов
- monitoring/ # Скриншоты мониторинга
- system-health.png # Здоровье системы
- resource-usage.png # Использование ресурсов
- error-logs.png # Логи ошибок
+README.md # Этот файл
+setup/ # Скриншоты установки и настройки
+docker-build.png # Процесс сборки Docker образов
+docker-hub-push.png # Публикация на Docker Hub
+docker-compose-up.png # Запуск через docker-compose
+airflow/ # Скриншоты интерфейса Airflow
+dag-overview.png # Обзор DAG
+dag-graph.png # Граф выполнения DAG
+task-logs.png # Логи выполнения задач
+admin-panel.png # Административная панель
+results/ # Скриншоты результатов ML
+model-metrics.png # Метрики модели
+confusion-matrix.png # Матрица ошибок
+roc-curve.png # ROC кривая
+feature-importance.png # Важность признаков
+database/ # Скриншоты базы данных
+postgres-connection.png # Подключение к PostgreSQL
+data-tables.png # Таблицы с данными
+query-results.png # Результаты запросов
+monitoring/ # Скриншоты мониторинга
+system-health.png # Здоровье системы
+resource-usage.png # Использование ресурсов
+error-logs.png # Логи ошибок
 ```
 
 ## Рекомендуемые скриншоты

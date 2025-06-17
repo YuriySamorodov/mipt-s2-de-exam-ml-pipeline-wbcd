@@ -1,0 +1,30 @@
+# PostgreSQL для ML Pipeline
+# Кастомизированная версия PostgreSQL для работы с Airflow
+FROM postgres:13
+
+# Установка дополнительных расширений
+RUN apt-get update && apt-get install -y \
+postgresql-contrib \
+postgresql-13-postgis-3 \
+curl \
+&& rm -rf /var/lib/apt/lists/*
+
+# Копирование скриптов инициализации
+COPY docker/init-postgres.sh /docker-entrypoint-initdb.d/
+COPY docker/postgresql.conf /etc/postgresql/postgresql.conf
+
+# Настройка прав
+RUN chmod +x /docker-entrypoint-initdb.d/init-postgres.sh
+
+# Переменные окружения
+ENV POSTGRES_DB=airflow
+ENV POSTGRES_USER=airflow
+ENV POSTGRES_PASSWORD=airflow
+ENV POSTGRES_INITDB_ARGS="--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+
+# Порт
+EXPOSE 5432
+
+# Добавление метки для идентификации
+LABEL ml-pipeline.component="postgresql"
+LABEL ml-pipeline.version="1.0"

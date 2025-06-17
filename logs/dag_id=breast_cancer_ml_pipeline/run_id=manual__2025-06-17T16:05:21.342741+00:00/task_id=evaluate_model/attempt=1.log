@@ -1,0 +1,77 @@
+[2025-06-17T20:06:35.165+0400] {{local_task_job_runner.py:123}} INFO - ::group::Pre task execution logs
+[2025-06-17T20:06:35.186+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:06:35.198+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:06:35.198+0400] {{taskinstance.py:2867}} INFO - Starting attempt 1 of 3
+[2025-06-17T20:06:35.212+0400] {{taskinstance.py:2890}} INFO - Executing <Task(PythonOperator): evaluate_model> on 2025-06-17 16:05:21.342741+00:00
+[2025-06-17T20:06:35.230+0400] {{logging_mixin.py:190}} WARNING - /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=41480) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-17T20:06:35.231+0400] {{standard_task_runner.py:72}} INFO - Started process 41486 to run task
+[2025-06-17T20:06:35.234+0400] {{standard_task_runner.py:104}} INFO - Running: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'evaluate_model', 'manual__2025-06-17T16:05:21.342741+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/var/folders/1f/q4s2m7nd4h11_dlypgrn202w0000gn/T/tmp9pyidt9p']
+[2025-06-17T20:06:35.243+0400] {{standard_task_runner.py:105}} INFO - Job 7: Subtask evaluate_model
+[2025-06-17T20:06:35.339+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:05:21.342741+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:35.779+0400] {{taskinstance.py:3134}} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@example.com' AIRFLOW_CTX_DAG_OWNER='data-engineer' AIRFLOW_CTX_DAG_ID='breast_cancer_ml_pipeline' AIRFLOW_CTX_TASK_ID='evaluate_model' AIRFLOW_CTX_EXECUTION_DATE='2025-06-17T16:05:21.342741+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-17T16:05:21.342741+00:00'
+[2025-06-17T20:06:35.781+0400] {{taskinstance.py:732}} INFO - ::endgroup::
+[2025-06-17T20:06:35.806+0400] {{logging_mixin.py:190}} INFO - Рабочая директория установлена в: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+[2025-06-17T20:06:35.807+0400] {{ml_pipeline_dag.py:352}} INFO - === НАЧАЛО ОЦЕНКИ МОДЕЛИ ===
+[2025-06-17T20:06:35.824+0400] {{ml_pipeline_dag.py:401}} INFO -  Получены данные через XCom:
+[2025-06-17T20:06:35.825+0400] {{ml_pipeline_dag.py:402}} INFO -    - Путь к модели: results/models/current_model.joblib
+[2025-06-17T20:06:35.826+0400] {{ml_pipeline_dag.py:403}} INFO -    - Тестовые данные: (114, 30)
+[2025-06-17T20:06:35.826+0400] {{ml_pipeline_dag.py:404}} INFO -    - Тип модели: LogisticRegression
+[2025-06-17T20:06:35.846+0400] {{metrics_calculator.py:348}} INFO - Начало полной оценки модели
+[2025-06-17T20:06:35.849+0400] {{metrics_calculator.py:69}} INFO - Расчет основных метрик классификации
+[2025-06-17T20:06:35.881+0400] {{metrics_calculator.py:90}} INFO - Основные метрики:
+[2025-06-17T20:06:35.882+0400] {{metrics_calculator.py:92}} INFO -   accuracy: 0.9737
+[2025-06-17T20:06:35.882+0400] {{metrics_calculator.py:92}} INFO -   precision: 0.9737
+[2025-06-17T20:06:35.883+0400] {{metrics_calculator.py:92}} INFO -   recall: 0.9737
+[2025-06-17T20:06:35.884+0400] {{metrics_calculator.py:92}} INFO -   f1_score: 0.9736
+[2025-06-17T20:06:35.884+0400] {{metrics_calculator.py:92}} INFO -   precision_macro: 0.9741
+[2025-06-17T20:06:35.885+0400] {{metrics_calculator.py:92}} INFO -   recall_macro: 0.9692
+[2025-06-17T20:06:35.885+0400] {{metrics_calculator.py:92}} INFO -   f1_score_macro: 0.9716
+[2025-06-17T20:06:35.886+0400] {{metrics_calculator.py:92}} INFO -   precision_binary: 0.9756
+[2025-06-17T20:06:35.886+0400] {{metrics_calculator.py:92}} INFO -   recall_binary: 0.9524
+[2025-06-17T20:06:35.887+0400] {{metrics_calculator.py:92}} INFO -   f1_score_binary: 0.9639
+[2025-06-17T20:06:35.888+0400] {{metrics_calculator.py:107}} INFO - Расчет метрик на основе вероятностей
+[2025-06-17T20:06:35.896+0400] {{metrics_calculator.py:141}} INFO - Вероятностные метрики:
+[2025-06-17T20:06:35.897+0400] {{metrics_calculator.py:144}} INFO -   roc_auc: 0.9960
+[2025-06-17T20:06:35.898+0400] {{metrics_calculator.py:159}} INFO - Расчет матрицы ошибок
+[2025-06-17T20:06:35.911+0400] {{metrics_calculator.py:187}} INFO - Матрица ошибок рассчитана. Форма: (2, 2)
+[2025-06-17T20:06:35.912+0400] {{metrics_calculator.py:189}} INFO -   Истинно положительные: 40
+[2025-06-17T20:06:35.913+0400] {{metrics_calculator.py:190}} INFO -   Истинно отрицательные: 71
+[2025-06-17T20:06:35.913+0400] {{metrics_calculator.py:191}} INFO -   Ложно положительные: 1
+[2025-06-17T20:06:35.914+0400] {{metrics_calculator.py:192}} INFO -   Ложно отрицательные: 2
+[2025-06-17T20:06:35.915+0400] {{metrics_calculator.py:193}} INFO -   Чувствительность: 0.9524
+[2025-06-17T20:06:35.915+0400] {{metrics_calculator.py:194}} INFO -   Специфичность: 0.9861
+[2025-06-17T20:06:35.916+0400] {{metrics_calculator.py:208}} INFO - Создание визуализации матрицы ошибок
+[2025-06-17T20:06:37.396+0400] {{metrics_calculator.py:236}} INFO - Матрица ошибок сохранена: results/confusion_matrix.png
+[2025-06-17T20:06:37.397+0400] {{metrics_calculator.py:252}} INFO - Создание ROC-кривой
+[2025-06-17T20:06:38.255+0400] {{metrics_calculator.py:285}} INFO - ROC-кривая сохранена: results/roc_curve.png
+[2025-06-17T20:06:38.256+0400] {{metrics_calculator.py:301}} INFO - Создание кривой Precision-Recall
+[2025-06-17T20:06:38.971+0400] {{metrics_calculator.py:334}} INFO - Кривая Precision-Recall сохранена: results/precision_recall_curve.png
+[2025-06-17T20:06:38.972+0400] {{metrics_calculator.py:371}} INFO - Полная оценка модели завершена
+[2025-06-17T20:06:38.972+0400] {{metrics_calculator.py:372}} INFO - Основные метрики на тестовых данных:
+[2025-06-17T20:06:38.974+0400] {{metrics_calculator.py:374}} INFO -   accuracy: 0.9737
+[2025-06-17T20:06:38.975+0400] {{metrics_calculator.py:374}} INFO -   precision: 0.9737
+[2025-06-17T20:06:38.975+0400] {{metrics_calculator.py:374}} INFO -   recall: 0.9737
+[2025-06-17T20:06:38.976+0400] {{metrics_calculator.py:374}} INFO -   f1_score: 0.9736
+[2025-06-17T20:06:38.977+0400] {{metrics_calculator.py:374}} INFO -   precision_macro: 0.9741
+[2025-06-17T20:06:38.978+0400] {{metrics_calculator.py:374}} INFO -   recall_macro: 0.9692
+[2025-06-17T20:06:38.979+0400] {{metrics_calculator.py:374}} INFO -   f1_score_macro: 0.9716
+[2025-06-17T20:06:38.979+0400] {{metrics_calculator.py:374}} INFO -   precision_binary: 0.9756
+[2025-06-17T20:06:38.980+0400] {{metrics_calculator.py:374}} INFO -   recall_binary: 0.9524
+[2025-06-17T20:06:38.981+0400] {{metrics_calculator.py:374}} INFO -   f1_score_binary: 0.9639
+[2025-06-17T20:06:38.983+0400] {{metrics_calculator.py:391}} INFO - Метрики сохранены: results/metrics.json
+[2025-06-17T20:06:38.984+0400] {{metrics_calculator.py:405}} INFO - Генерация отчета об оценке модели
+[2025-06-17T20:06:38.985+0400] {{metrics_calculator.py:461}} INFO - Отчет об оценке сохранен: results/evaluation_report.md
+[2025-06-17T20:06:39.002+0400] {{ml_pipeline_dag.py:457}} INFO -  Модель оценена:
+[2025-06-17T20:06:39.003+0400] {{ml_pipeline_dag.py:458}} INFO -    - Источник данных: XCom
+[2025-06-17T20:06:39.004+0400] {{ml_pipeline_dag.py:459}} INFO -    - Точность: 0.9737
+[2025-06-17T20:06:39.004+0400] {{ml_pipeline_dag.py:460}} INFO -    - Precision: 0.9737
+[2025-06-17T20:06:39.005+0400] {{ml_pipeline_dag.py:461}} INFO -    - Recall: 0.9737
+[2025-06-17T20:06:39.006+0400] {{ml_pipeline_dag.py:462}} INFO -    - F1-score: 0.9736
+[2025-06-17T20:06:39.007+0400] {{ml_pipeline_dag.py:463}} INFO -    - ROC AUC: 0.0000
+[2025-06-17T20:06:39.007+0400] {{ml_pipeline_dag.py:464}} INFO - === ОЦЕНКА МОДЕЛИ ЗАВЕРШЕНА ===
+[2025-06-17T20:06:39.008+0400] {{python.py:240}} INFO - Done. Returned value was: {'status': 'success', 'accuracy': 0.9736842105263158, 'f1_score': 0.9736164257756981, 'roc_auc': 0, 'data_source': 'xcom'}
+[2025-06-17T20:06:39.020+0400] {{taskinstance.py:341}} INFO - ::group::Post task execution logs
+[2025-06-17T20:06:39.022+0400] {{taskinstance.py:353}} INFO - Marking task as SUCCESS. dag_id=breast_cancer_ml_pipeline, task_id=evaluate_model, run_id=manual__2025-06-17T16:05:21.342741+00:00, execution_date=20250617T160521, start_date=20250617T160635, end_date=20250617T160639
+[2025-06-17T20:06:39.097+0400] {{local_task_job_runner.py:266}} INFO - Task exited with return code 0
+[2025-06-17T20:06:39.131+0400] {{taskinstance.py:3901}} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-17T20:06:39.133+0400] {{local_task_job_runner.py:245}} INFO - ::endgroup::

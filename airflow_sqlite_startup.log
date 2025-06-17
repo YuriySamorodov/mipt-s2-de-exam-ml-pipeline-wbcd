@@ -1,0 +1,195 @@
+Запуск Airflow SQLite (SequentialExecutor, порт 8081)...
+Запуск Airflow SQLite с программным формированием абсолютных путей
+Режим: SQLite + SequentialExecutor (порт 8081)
+
+Директория проекта: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+Активация виртуального окружения...
+Версия Airflow: 2.10.5
+Остановка текущих процессов Airflow...
+Настройка конфигурации SQLite с абсолютными путями...
+Настройка конфигурации Airflow с абсолютными путями
+Режим развертывания: SQLite (порт 8081)
+
+Формирование абсолютных путей для Airflow...
+Директория проекта: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+DAGs: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+Plugins: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/plugins
+Logs: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs
+SQLite DB: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Создан файл конфигурации: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.cfg
+База данных: SQLite
+Исполнитель: SequentialExecutor
+Веб-сервер: http://localhost:8081
+
+Настройка завершена успешно!
+
+Сводка путей:
+project_dir: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+airflow_home: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+dags_folder: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+plugins_folder: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/plugins
+logs_folder: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs
+sqlite_db_path: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+sql_alchemy_conn_sqlite: sqlite:////Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+
+Следующие шаги:
+1. Запустите скрипт инициализации базы данных
+2. Используйте обновленные скрипты запуска Airflow
+3. Все пути теперь формируются программно и являются абсолютными
+4. Веб-интерфейс будет доступен на http://localhost:8081
+
+Использование:
+python setup_airflow_config.py # SQLite (порт 8081)
+python setup_airflow_config.py --postgres # PostgreSQL (порт 8082)
+python setup_airflow_config.py --docker # Docker (порт 8083)
+AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+Инициализация базы данных SQLite с абсолютными путями...
+Инициализация Airflow с абсолютными путями
+============================================================
+Настройка окружения с абсолютными путями:
+Проект: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+База данных: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+DAGs: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+Логи: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs
+
+============================================================
+Инициализация базы данных Airflow...
+Создана резервная копия: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db.backup
+️ Удалена старая база данных: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Создана новая база данных: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Инициализация схемы базы данных...
+Инициализация схемы базы данных - успешно
+Вывод: DB: sqlite:////Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+[2025-06-17T19:54:02.409+0400] {{migration.py:207}} INFO - Context impl SQLiteImpl.
+[2025-06-17T19:54:02.411+0400] {{migration.py:210}} INFO - Will assume non-transactional DDL.
+Initialization done
+База данных создана: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Размер базы данных: 569344 байт
+Создание пользователя admin...
+Создание пользователя admin...
+Создание пользователя admin - успешно
+Вывод: [2025-06-17T19:54:05.655+0400] {{override.py:1508}} INFO - Inserted Role: Admin
+[2025-06-17T19:54:05.660+0400] {{override.py:965}} WARNING - No user yet created, use flask fab command to do it.
+[2025-06-17T19:54:05.697+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Passwords
+[2025-06-17T19:54:05.702+0400] {{override.py:1963}} INFO - Added Permission can edit on Passwords to role Admin
+[2025-06-17T19:54:05.709+0400] {{override.py:1912}} INFO - Created Permission View: can read on Passwords
+[2025-06-17T19:54:05.714+0400] {{override.py:1963}} INFO - Added Permission can read on Passwords to role Admin
+[2025-06-17T19:54:05.727+0400] {{override.py:1912}} INFO - Created Permission View: can edit on My Password
+[2025-06-17T19:54:05.732+0400] {{override.py:1963}} INFO - Added Permission can edit on My Password to role Admin
+[2025-06-17T19:54:05.737+0400] {{override.py:1912}} INFO - Created Permission View: can read on My Password
+[2025-06-17T19:54:05.741+0400] {{override.py:1963}} INFO - Added Permission can read on My Password to role Admin
+[2025-06-17T19:54:05.752+0400] {{override.py:1912}} INFO - Created Permission View: can edit on My Profile
+[2025-06-17T19:54:05.756+0400] {{override.py:1963}} INFO - Added Permission can edit on My Profile to role Admin
+[2025-06-17T19:54:05.762+0400] {{override.py:1912}} INFO - Created Permission View: can read on My Profile
+[2025-06-17T19:54:05.766+0400] {{override.py:1963}} INFO - Added Permission can read on My Profile to role Admin
+[2025-06-17T19:54:05.802+0400] {{override.py:1912}} INFO - Created Permission View: can create on Users
+[2025-06-17T19:54:05.806+0400] {{override.py:1963}} INFO - Added Permission can create on Users to role Admin
+[2025-06-17T19:54:05.812+0400] {{override.py:1912}} INFO - Created Permission View: can read on Users
+[2025-06-17T19:54:05.816+0400] {{override.py:1963}} INFO - Added Permission can read on Users to role Admin
+[2025-06-17T19:54:05.821+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Users
+[2025-06-17T19:54:05.825+0400] {{override.py:1963}} INFO - Added Permission can edit on Users to role Admin
+[2025-06-17T19:54:05.832+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Users
+[2025-06-17T19:54:05.837+0400] {{override.py:1963}} INFO - Added Permission can delete on Users to role Admin
+[2025-06-17T19:54:05.848+0400] {{override.py:1912}} INFO - Created Permission View: menu access on List Users
+[2025-06-17T19:54:05.853+0400] {{override.py:1963}} INFO - Added Permission menu access on List Users to role Admin
+[2025-06-17T19:54:05.863+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Security
+[2025-06-17T19:54:05.867+0400] {{override.py:1963}} INFO - Added Permission menu access on Security to role Admin
+[2025-06-17T19:54:05.896+0400] {{override.py:1912}} INFO - Created Permission View: can create on Roles
+[2025-06-17T19:54:05.900+0400] {{override.py:1963}} INFO - Added Permission can create on Roles to role Admin
+[2025-06-17T19:54:05.906+0400] {{override.py:1912}} INFO - Created Permission View: can read on Roles
+[2025-06-17T19:54:05.910+0400] {{override.py:1963}} INFO - Added Permission can read on Roles to role Admin
+[2025-06-17T19:54:05.916+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Roles
+[2025-06-17T19:54:05.920+0400] {{override.py:1963}} INFO - Added Permission can edit on Roles to role Admin
+[2025-06-17T19:54:05.925+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Roles
+[2025-06-17T19:54:05.930+0400] {{override.py:1963}} INFO - Added Permission can delete on Roles to role Admin
+[2025-06-17T19:54:05.940+0400] {{override.py:1912}} INFO - Created Permission View: menu access on List Roles
+[2025-06-17T19:54:05.944+0400] {{override.py:1963}} INFO - Added Permission menu access on List Roles to role Admin
+[2025-06-17T19:54:05.961+0400] {{override.py:1912}} INFO - Created Permission View: can read on User Stats Chart
+[2025-06-17T19:54:05.965+0400] {{override.py:1963}} INFO - Added Permission can read on User Stats Chart to role Admin
+[2025-06-17T19:54:05.975+0400] {{override.py:1912}} INFO - Created Permission View: menu access on User's Statistics
+[2025-06-17T19:54:05.981+0400] {{override.py:1963}} INFO - Added Permission menu access on User's Statistics to role Admin
+[2025-06-17T19:54:06.014+0400] {{override.py:1912}} INFO - Created Permission View: can read on Permissions
+[2025-06-17T19:54:06.019+0400] {{override.py:1963}} INFO - Added Permission can read on Permissions to role Admin
+[2025-06-17T19:54:06.029+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Actions
+[2025-06-17T19:54:06.034+0400] {{override.py:1963}} INFO - Added Permission menu access on Actions to role Admin
+[2025-06-17T19:54:06.067+0400] {{override.py:1912}} INFO - Created Permission View: can read on View Menus
+[2025-06-17T19:54:06.071+0400] {{override.py:1963}} INFO - Added Permission can read on View Menus to role Admin
+[2025-06-17T19:54:06.082+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Resources
+[2025-06-17T19:54:06.087+0400] {{override.py:1963}} INFO - Added Permission menu access on Resources to role Admin
+[2025-06-17T19:54:06.118+0400] {{override.py:1912}} INFO - Created Permission View: can read on Permission Views
+[2025-06-17T19:54:06.122+0400] {{override.py:1963}} INFO - Added Permission can read on Permission Views to role Admin
+[2025-06-17T19:54:06.133+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Permission Pairs
+[2025-06-17T19:54:06.137+0400] {{override.py:1963}} INFO - Added Permission menu access on Permission Pairs to role Admin
+[2025-06-17T19:54:06.426+0400] {{override.py:1597}} INFO - Added user admin
+User "admin" created with role "Admin"
+
+============================================================
+Проверка корректности установки...
+Директория AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+База данных SQLite: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Директория DAGs: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+Директория логов: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs
+Проверка: Версия Airflow
+Версия Airflow...
+Версия Airflow - успешно
+Вывод: 2.10.5
+Проверка: Путь к DAGs
+Путь к DAGs...
+Путь к DAGs - успешно
+Вывод: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+Проверка: Строка подключения к БД
+Строка подключения к БД...
+Строка подключения к БД - успешно
+Вывод: sqlite:////Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+
+============================================================
+Инициализация завершена успешно!
+
+Информация для запуска:
+База данных: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Строка подключения: sqlite:////Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+Пользователь: admin
+Пароль: admin
+
+Теперь можно запускать Airflow!
+Установка переменных окружения с абсолютными путями...
+
+Запуск сервисов Airflow SQLite...
+Запуск Scheduler...
+Scheduler запущен (PID: 40357)
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+Запуск Webserver на порту 8081...
+Webserver запущен (PID: 40382)
+
+Airflow SQLite запущен успешно!
+
+Информация о системе:
+Web UI: http://localhost:8081
+Логин: admin
+Пароль: admin
+База данных: SQLite (абсолютный путь)
+Исполнитель: SequentialExecutor
+
+Логи:
+Scheduler: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs/scheduler_sqlite.log
+Webserver: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs/webserver_sqlite.log
+
+Для остановки используйте: ./stop_airflow_sqlite.sh
+
+⏳ Ожидание готовности webserver (30 секунд)...
+Проверка готовности сервисов...
+Webserver готов: http://localhost:8081
+
+Система готова к работе!
+
+Все пути сформированы программно и являются абсолютными:
+Проект: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+AIRFLOW_HOME: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow
+База данных: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/airflow/airflow.db
+DAGs: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/dags
+Логи: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/logs
+
+Для тестирования DAG используйте: python ../../test_airflow_dag.py

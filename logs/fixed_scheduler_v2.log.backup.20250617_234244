@@ -1,0 +1,160 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+🔧 Применение патча для LocalExecutor...
+✅ LocalExecutor успешно пропатчен!
+🚀 Запуск Airflow scheduler...
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-06-17T21:03:10.527+0400] {{executor_loader.py:258}} INFO - Loaded executor: LocalExecutor
+[2025-06-17T21:03:10.563+0400] {{scheduler_job_runner.py:950}} INFO - Starting the scheduler
+[2025-06-17T21:03:10.564+0400] {{scheduler_job_runner.py:957}} INFO - Processing each file at most -1 times
+✅ FixedLocalExecutor запущен с ThreadPoolExecutor
+[2025-06-17T21:03:10.570+0400] {{manager.py:174}} INFO - Launched DagFileProcessorManager with pid: 48179
+[2025-06-17T21:03:10.572+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T21:03:10.577+0400] {{scheduler_job_runner.py:1972}} INFO - Marked 1 SchedulerJob instances as failed
+[2025-06-17T21:03:10.688+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:10.689+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:03:10.689+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:10.705+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.health_check manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:03:10.706+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 8 and queue default
+[2025-06-17T21:03:10.706+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'health_check', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17 21:03:11 +0400] [48178] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 21:03:11 +0400] [48178] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:03:11 +0400] [48178] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17T21:03:12.085+0400] {{settings.py:63}} INFO - Configured default timezone UTC
+[2025-06-17 21:03:12 +0400] [48178] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:03:12 +0400] [48178] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:03:13 +0400] [48178] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:03:13 +0400] [48178] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:03:14 +0400] [48178] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:03:14 +0400] [48178] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:03:15 +0400] [48178] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 21:03:15 +0400] [48178] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 21:03:16 +0400] [48178] [ERROR] Can't connect to ('::', 8793)
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline health_check manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:16.725+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:16.726+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:03:16.726+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:16.729+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.load_and_validate_data manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:03:16.731+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='load_and_validate_data', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 7 and queue default
+[2025-06-17T21:03:16.731+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'load_and_validate_data', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline load_and_validate_data manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:03:16.733+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='health_check', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:16.764+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=health_check, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:03:15.117942+00:00, run_end_date=2025-06-17 17:03:15.632853+00:00, run_duration=0.514911, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=10, pool=default_pool, queue=default, priority_weight=8, operator=PythonOperator, queued_dttm=2025-06-17 17:03:10.690301+00:00, queued_by_job_id=9, pid=48198
+[2025-06-17T21:03:23.937+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:23.938+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:03:23.938+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:23.955+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:03:23.956+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='preprocess_data', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 5 and queue default
+[2025-06-17T21:03:23.957+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'preprocess_data', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline preprocess_data manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:03:24.057+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='load_and_validate_data', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:25.126+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:25.127+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 1/2 running and queued tasks
+[2025-06-17T21:03:25.127+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:25.129+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.data_quality_check manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:03:25.130+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='data_quality_check', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 1 and queue default
+[2025-06-17T21:03:25.131+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'data_quality_check', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+[2025-06-17T21:03:25.132+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='load_and_validate_data', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline data_quality_check manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:03:25.159+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=load_and_validate_data, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:03:22.369921+00:00, run_end_date=2025-06-17 17:03:23.557349+00:00, run_duration=1.187428, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=11, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2025-06-17 17:03:16.727618+00:00, queued_by_job_id=9, pid=48233
+[2025-06-17T21:03:25.357+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:25.637+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:25.782+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:26.872+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:27.959+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:29.035+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:30.117+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:30.713+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:30.881+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:31.976+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:33.064+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:34.157+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='preprocess_data', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:35.278+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:35.279+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 1/2 running and queued tasks
+[2025-06-17T21:03:35.280+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:35.287+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.train_model manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:03:35.289+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='train_model', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 4 and queue default
+[2025-06-17T21:03:35.289+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'train_model', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline train_model manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:03:35.305+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='preprocess_data', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:35.325+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=preprocess_data, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:03:31.575915+00:00, run_end_date=2025-06-17 17:03:33.025673+00:00, run_duration=1.449758, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=12, pool=default_pool, queue=default, priority_weight=5, operator=PythonOperator, queued_dttm=2025-06-17 17:03:23.939838+00:00, queued_by_job_id=9, pid=48286
+[2025-06-17T21:03:35.385+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:03:35.978+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='data_quality_check', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:37.087+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='data_quality_check', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:37.110+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=data_quality_check, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:03:33.166737+00:00, run_end_date=2025-06-17 17:03:35.179099+00:00, run_duration=2.012362, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=13, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2025-06-17 17:03:25.128610+00:00, queued_by_job_id=9, pid=48310
+[2025-06-17T21:03:46.210+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:46.211+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:03:46.212+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:03:46.215+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.evaluate_model manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:03:46.217+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='evaluate_model', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 3 and queue default
+[2025-06-17T21:03:46.217+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'evaluate_model', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline evaluate_model manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:03:46.324+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='train_model', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:47.416+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='train_model', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:03:47.423+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=train_model, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:03:44.579234+00:00, run_end_date=2025-06-17 17:03:45.722083+00:00, run_duration=1.142849, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=14, pool=default_pool, queue=default, priority_weight=4, operator=PythonOperator, queued_dttm=2025-06-17 17:03:35.281796+00:00, queued_by_job_id=9, pid=48349
+[2025-06-17T21:04:00.879+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:04:00.880+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:04:00.881+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:04:00.884+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.save_results manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:04:00.885+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='save_results', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 2 and queue default
+[2025-06-17T21:04:00.886+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'save_results', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline save_results manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:04:00.977+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+[2025-06-17T21:04:01.583+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='evaluate_model', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:04:02.711+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='evaluate_model', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:04:02.717+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=evaluate_model, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:03:54.770505+00:00, run_end_date=2025-06-17 17:04:00.134325+00:00, run_duration=5.36382, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=15, pool=default_pool, queue=default, priority_weight=3, operator=PythonOperator, queued_dttm=2025-06-17 17:03:46.213548+00:00, queued_by_job_id=9, pid=48389
+[2025-06-17T21:04:12.924+0400] {{scheduler_job_runner.py:435}} INFO - 1 tasks up for execution:
+	<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:04:12.925+0400] {{scheduler_job_runner.py:507}} INFO - DAG breast_cancer_ml_pipeline has 0/2 running and queued tasks
+[2025-06-17T21:04:12.925+0400] {{scheduler_job_runner.py:646}} INFO - Setting the following tasks to queued state:
+	<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>
+[2025-06-17T21:04:12.929+0400] {{scheduler_job_runner.py:748}} INFO - Trying to enqueue tasks: [<TaskInstance: breast_cancer_ml_pipeline.cleanup manual__2025-06-17T16:57:52.003690+00:00 [scheduled]>] for executor: FixedLocalExecutor(parallelism=2)
+[2025-06-17T21:04:12.930+0400] {{scheduler_job_runner.py:692}} INFO - Sending TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='cleanup', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 1 and queue default
+[2025-06-17T21:04:12.931+0400] {{base_executor.py:169}} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'cleanup', 'manual__2025-06-17T16:57:52.003690+00:00', '--local', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py']
+🔄 Выполняется команда: airflow tasks run breast_cancer_ml_pipeline cleanup manual__2025-06-17T16:57:52.003690+00:00 --local --subdir DAGS_FOLDER/ml_pipeline_dag.py
+[2025-06-17T21:04:13.032+0400] {{base_executor.py:293}} INFO - Executor parallelism limit reached. 0 open slots.
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='save_results', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:04:14.125+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='save_results', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:04:14.132+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=save_results, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:04:10.376612+00:00, run_end_date=2025-06-17 17:04:11.880639+00:00, run_duration=1.504027, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=16, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2025-06-17 17:04:00.882227+00:00, queued_by_job_id=9, pid=48450
+[2025-06-17T21:04:24.187+0400] {{dagrun.py:854}} INFO - Marking run <DagRun breast_cancer_ml_pipeline @ 2025-06-17 16:57:52.003690+00:00: manual__2025-06-17T16:57:52.003690+00:00, state:running, queued_at: 2025-06-17 16:57:52.038260+00:00. externally triggered: True> successful
+[2025-06-17T21:04:24.189+0400] {{dagrun.py:905}} INFO - DagRun Finished: dag_id=breast_cancer_ml_pipeline, execution_date=2025-06-17 16:57:52.003690+00:00, run_id=manual__2025-06-17T16:57:52.003690+00:00, run_start_date=2025-06-17 16:57:52.254345+00:00, run_end_date=2025-06-17 17:04:24.189327+00:00, run_duration=391.934982, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-06-17 16:57:52.003690+00:00, data_interval_end=2025-06-17 16:57:52.003690+00:00, dag_hash=c9073b96a3a2161ca0e871c164e4215e
+✅ Команда успешно выполнена: TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='cleanup', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:04:25.977+0400] {{scheduler_job_runner.py:776}} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='breast_cancer_ml_pipeline', task_id='cleanup', run_id='manual__2025-06-17T16:57:52.003690+00:00', try_number=1, map_index=-1)
+[2025-06-17T21:04:25.987+0400] {{scheduler_job_runner.py:813}} INFO - TaskInstance Finished: dag_id=breast_cancer_ml_pipeline, task_id=cleanup, run_id=manual__2025-06-17T16:57:52.003690+00:00, map_index=-1, run_start_date=2025-06-17 17:04:22.573048+00:00, run_end_date=2025-06-17 17:04:23.786229+00:00, run_duration=1.213181, state=success, executor=FixedLocalExecutor(parallelism=2), executor_state=success, try_number=1, max_tries=2, job_id=17, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2025-06-17 17:04:12.926885+00:00, queued_by_job_id=9, pid=48519
+[2025-06-17T21:08:10.643+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17T21:09:04.483+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T21:09:05.521+0400] {{process_utils.py:132}} INFO - Sending 15 to group 48179. PIDs of all processes in the group: [48955, 48965, 48179]
+[2025-06-17T21:09:05.522+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 48179
+[2025-06-17T21:09:05.878+0400] {{process_utils.py:266}} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-06-17T21:09:05.885+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=48965, status='terminated', started='21:09:04') (48965) terminated with exit code None
+[2025-06-17T21:09:06.253+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=48179, status='terminated', exitcode=0, started='21:03:10') (48179) terminated with exit code 0
+[2025-06-17T21:09:06.254+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=48955, status='terminated', started='21:09:00') (48955) terminated with exit code None
+✅ FixedLocalExecutor остановлен
+[2025-06-17T21:09:06.293+0400] {{process_utils.py:132}} INFO - Sending 15 to group 48179. PIDs of all processes in the group: []
+[2025-06-17T21:09:06.294+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 48179
+[2025-06-17T21:09:06.294+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 48179 as process group is missing.
+[2025-06-17T21:09:06.295+0400] {{scheduler_job_runner.py:1029}} INFO - Exited execute loop

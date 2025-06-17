@@ -1,0 +1,43 @@
+[2025-06-17T20:06:00.327+0400] {{local_task_job_runner.py:123}} INFO - ::group::Pre task execution logs
+[2025-06-17T20:06:00.349+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:06:00.358+0400] {{taskinstance.py:2614}} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [queued]>
+[2025-06-17T20:06:00.359+0400] {{taskinstance.py:2867}} INFO - Starting attempt 1 of 3
+[2025-06-17T20:06:00.372+0400] {{taskinstance.py:2890}} INFO - Executing <Task(PythonOperator): preprocess_data> on 2025-06-17 16:05:21.342741+00:00
+[2025-06-17T20:06:00.390+0400] {{logging_mixin.py:190}} WARNING - /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=41458) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-17T20:06:00.392+0400] {{standard_task_runner.py:72}} INFO - Started process 41462 to run task
+[2025-06-17T20:06:00.392+0400] {{standard_task_runner.py:104}} INFO - Running: ['airflow', 'tasks', 'run', 'breast_cancer_ml_pipeline', 'preprocess_data', 'manual__2025-06-17T16:05:21.342741+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/var/folders/1f/q4s2m7nd4h11_dlypgrn202w0000gn/T/tmp3cde4x2x']
+[2025-06-17T20:06:00.400+0400] {{standard_task_runner.py:105}} INFO - Job 4: Subtask preprocess_data
+[2025-06-17T20:06:00.487+0400] {{task_command.py:467}} INFO - Running <TaskInstance: breast_cancer_ml_pipeline.preprocess_data manual__2025-06-17T16:05:21.342741+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2025-06-17T20:06:00.909+0400] {{taskinstance.py:3134}} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@example.com' AIRFLOW_CTX_DAG_OWNER='data-engineer' AIRFLOW_CTX_DAG_ID='breast_cancer_ml_pipeline' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-17T16:05:21.342741+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-17T16:05:21.342741+00:00'
+[2025-06-17T20:06:00.910+0400] {{taskinstance.py:732}} INFO - ::endgroup::
+[2025-06-17T20:06:00.934+0400] {{logging_mixin.py:190}} INFO - Рабочая директория установлена в: /Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project
+[2025-06-17T20:06:00.935+0400] {{ml_pipeline_dag.py:154}} INFO - === НАЧАЛО ПРЕДОБРАБОТКИ ДАННЫХ ===
+[2025-06-17T20:06:00.963+0400] {{ml_pipeline_dag.py:172}} INFO -  Получены данные через XCom: (569, 32)
+[2025-06-17T20:06:00.989+0400] {{data_preprocessor.py:495}} INFO - Запуск полного пайплайна предобработки
+[2025-06-17T20:06:00.990+0400] {{data_preprocessor.py:66}} INFO - Начало очистки данных
+[2025-06-17T20:06:01.013+0400] {{data_preprocessor.py:96}} INFO - Очистка данных завершена. Осталось строк: 569
+[2025-06-17T20:06:01.014+0400] {{data_preprocessor.py:109}} INFO - Начало подготовки признаков
+[2025-06-17T20:06:01.019+0400] {{data_preprocessor.py:135}} INFO - Выбрано признаков для обучения: 30
+[2025-06-17T20:06:01.020+0400] {{data_preprocessor.py:173}} INFO - Начало разделения данных
+[2025-06-17T20:06:01.030+0400] {{data_preprocessor.py:197}} INFO - Данные разделены:
+[2025-06-17T20:06:01.031+0400] {{data_preprocessor.py:198}} INFO -   Обучающая выборка: 455 образцов
+[2025-06-17T20:06:01.031+0400] {{data_preprocessor.py:199}} INFO -   Тестовая выборка: 114 образцов
+[2025-06-17T20:06:01.032+0400] {{data_preprocessor.py:200}} INFO -   Признаков: 30
+[2025-06-17T20:06:01.036+0400] {{data_preprocessor.py:205}} INFO -   Распределение в обучающей выборке: {0: 285, 1: 170}
+[2025-06-17T20:06:01.037+0400] {{data_preprocessor.py:206}} INFO -   Распределение в тестовой выборке: {0: 72, 1: 42}
+[2025-06-17T20:06:01.037+0400] {{data_preprocessor.py:150}} INFO - Начало нормализации признаков
+[2025-06-17T20:06:01.042+0400] {{data_preprocessor.py:154}} INFO - Скейлер обучен на 455 образцах
+[2025-06-17T20:06:01.045+0400] {{data_preprocessor.py:159}} INFO - Тестовые данные нормализованы: 114 образцов
+[2025-06-17T20:06:01.050+0400] {{data_preprocessor.py:223}} INFO - Скейлер сохранен: results/preprocessors/scaler.joblib
+[2025-06-17T20:06:01.051+0400] {{data_preprocessor.py:234}} INFO - Список признаков сохранен: results/preprocessors/feature_columns.joblib
+[2025-06-17T20:06:01.052+0400] {{data_preprocessor.py:512}} INFO - Пайплайн предобработки завершен успешно
+[2025-06-17T20:06:01.072+0400] {{ml_pipeline_dag.py:209}} INFO -  Предобработанные данные переданы через XCom
+[2025-06-17T20:06:01.072+0400] {{ml_pipeline_dag.py:210}} INFO -    - Обучающая выборка: (455, 30)
+[2025-06-17T20:06:01.073+0400] {{ml_pipeline_dag.py:211}} INFO -    - Тестовая выборка: (114, 30)
+[2025-06-17T20:06:01.074+0400] {{ml_pipeline_dag.py:212}} INFO - === ПРЕДОБРАБОТКА ДАННЫХ ЗАВЕРШЕНА ===
+[2025-06-17T20:06:01.075+0400] {{python.py:240}} INFO - Done. Returned value was: {'status': 'success', 'train_shape': (455, 30), 'test_shape': (114, 30), 'features': 30}
+[2025-06-17T20:06:01.086+0400] {{taskinstance.py:341}} INFO - ::group::Post task execution logs
+[2025-06-17T20:06:01.088+0400] {{taskinstance.py:353}} INFO - Marking task as SUCCESS. dag_id=breast_cancer_ml_pipeline, task_id=preprocess_data, run_id=manual__2025-06-17T16:05:21.342741+00:00, execution_date=20250617T160521, start_date=20250617T160600, end_date=20250617T160601
+[2025-06-17T20:06:01.162+0400] {{local_task_job_runner.py:266}} INFO - Task exited with return code 0
+[2025-06-17T20:06:01.193+0400] {{taskinstance.py:3901}} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-17T20:06:01.195+0400] {{local_task_job_runner.py:245}} INFO - ::endgroup::

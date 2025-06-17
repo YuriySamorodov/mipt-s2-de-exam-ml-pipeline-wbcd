@@ -1,0 +1,123 @@
+# Docker Compose для ML Pipeline с Apache Airflow (ОПТИМИЗИРОВАННЫЙ)
+version: '3.8'
+
+x-airflow-common:
+&airflow-common
+image: ml-pipeline-airflow-base:latest # Используем единый образ
+environment: &airflow-common-env
+AIRFLOW__CORE__EXECUTOR: LocalExecutor
+AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+AIRFLOW__CORE__FERNET_KEY: ''
+AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
+AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+AIRFLOW__WEBSERVER__WEB_SERVER_PORT: 8082 # Docker использует внутренний порт 8082 (PostgreSQL + LocalExecutor)
+# Оптимизации для устранения zombie процессов
+AIRFLOW__CORE__PARALLELISM: 8
+AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: 4
+AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: 1
+AIRFLOW__SCHEDULER__JOB_HEARTBEAT_SEC: 30
+AIRFLOW__SCHEDULER__SCHEDULER_HEARTBEAT_SEC: 15
+AIRFLOW__SCHEDULER__LOCAL_TASK_JOB_HEARTBEAT_SEC: 120
+AIRFLOW__SCHEDULER__SCHEDULER_ZOMBIE_TASK_THRESHOLD: 1800
+AIRFLOW__SCHEDULER__ZOMBIE_DETECTION_INTERVAL: 300
+AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
+AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
+AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_PRE_PING: 'True'
+AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+_PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-pandas scikit-learn joblib pyyaml python-dotenv}
+volumes:
+- ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+- ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
+- ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
+- ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+- ${AIRFLOW_PROJ_DIR:-.}/etl:/opt/airflow/etl
+- ${AIRFLOW_PROJ_DIR:-.}/data:/opt/airflow/data
+- ${AIRFLOW_PROJ_DIR:-.}/results:/opt/airflow/results
+user: "${AIRFLOW_UID:-50000}:0"
+depends_on: &airflow-common-depends-on
+postgres:
+condition: service_healthy
+
+services:
+# Создание базового образа
+airflow-base-builder:
+build:
+context: .
+dockerfile: Dockerfile.airflow
+image: ml-pipeline-airflow-base:latest
+command: ["echo", "Base image created successfully"]
+# База данных для Airflow
+postgres:
+image: postgres:13
+environment:
+POSTGRES_USER: airflow
+POSTGRES_PASSWORD: airflow
+POSTGRES_DB: airflow
+volumes:
+- postgres-db-volume:/var/lib/postgresql/data
+healthcheck:
+test: ["CMD", "pg_isready", "-U", "airflow"]
+interval: 10s
+retries: 5
+start_period: 5s
+restart: always
+ports:
+- "5433:5432" # Используем внешний порт 5433 для избежания конфликта с локальным PostgreSQL
+
+# Инициализация базы данных
+airflow-init:
+<<: *airflow-common
+entrypoint: /bin/bash
+command:
+- -c
+- |
+if [[ -z "${AIRFLOW_UID}" ]]; then
+echo -e "\\033[1;33mWARNING!!!: AIRFLOW_UID not set!\\e[0m"
+echo "If you are on Linux, you SHOULD follow the instructions below to set "
+echo "AIRFLOW_UID environment variable, otherwise files will be owned by root."
+echo "For other operating systems you can get rid of the warning with manually created .env file:"
+echo " See: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#setting-the-right-airflow-user"
+fi
+mkdir -p /sources/logs /sources/dags /sources/plugins
+chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
+exec /entrypoint airflow version
+environment:
+<<: *airflow-common-env
+_AIRFLOW_DB_UPGRADE: 'true'
+_AIRFLOW_WWW_USER_CREATE: 'true'
+_AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-admin}
+_AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-admin}
+user: "0:0"
+volumes:
+- ${AIRFLOW_PROJ_DIR:-.}:/sources
+
+# Веб-сервер Airflow
+airflow-webserver:
+<<: *airflow-common
+command: webserver --port 8082
+ports:
+- "8083:8082" # Docker вариант: внешний порт 8083, внутренний порт 8082 (PostgreSQL + LocalExecutor)
+healthcheck:
+test: ["CMD", "curl", "--fail", "http://localhost:8082/health"]
+interval: 30s
+timeout: 10s
+retries: 5
+start_period: 30s
+restart: always
+
+# Планировщик Airflow
+airflow-scheduler:
+<<: *airflow-common
+command: scheduler
+healthcheck:
+test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
+interval: 30s
+timeout: 10s
+retries: 5
+start_period: 30s
+restart: always
+
+volumes:
+postgres-db-volume:

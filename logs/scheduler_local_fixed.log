@@ -1,0 +1,71 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-06-17T20:43:17.787+0400] {{executor_loader.py:258}} INFO - Loaded executor: LocalExecutor
+[2025-06-17T20:43:17.884+0400] {{scheduler_job_runner.py:950}} INFO - Starting the scheduler
+[2025-06-17T20:43:17.885+0400] {{scheduler_job_runner.py:957}} INFO - Processing each file at most -1 times
+[2025-06-17 20:43:22 +0400] [46237] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 20:43:22 +0400] [46237] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 20:43:22 +0400] [46237] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17T20:43:22.357+0400] {{manager.py:174}} INFO - Launched DagFileProcessorManager with pid: 46256
+[2025-06-17T20:43:22.362+0400] {{scheduler_job_runner.py:1949}} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-06-17 20:43:23 +0400] [46237] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 20:43:23 +0400] [46237] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 20:43:24 +0400] [46237] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 20:43:24 +0400] [46237] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 20:43:25 +0400] [46237] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 20:43:25 +0400] [46237] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-17 20:43:26 +0400] [46237] [ERROR] Connection in use: ('::', 8793)
+[2025-06-17 20:43:26 +0400] [46237] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    self = reduction.pickle.load(from_parent)
+    exitcode = _main(fd, parent_sentinel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.12/3.12.7_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueuedLocalWorker' object has no attribute 'wrapper'
+[2025-06-17T20:43:27.282+0400] {{settings.py:63}} INFO - Configured default timezone UTC
+[2025-06-17 20:43:27 +0400] [46237] [ERROR] Can't connect to ('::', 8793)
+[2025-06-17T20:44:36.170+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:44:37.101+0400] {{process_utils.py:266}} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-06-17T20:44:37.226+0400] {{process_utils.py:132}} INFO - Sending 15 to group 46256. PIDs of all processes in the group: [46256]
+[2025-06-17T20:44:37.227+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 46256
+[2025-06-17T20:44:37.256+0400] {{process_utils.py:80}} INFO - Process psutil.Process(pid=46256, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='20:43:22') (46256) terminated with exit code -15
+[2025-06-17T20:44:37.258+0400] {{local_executor.py:423}} INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+[2025-06-17T20:48:15.513+0400] {{scheduler_job_runner.py:272}} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-17T20:48:15.572+0400] {{process_utils.py:132}} INFO - Sending 15 to group 46256. PIDs of all processes in the group: []
+[2025-06-17T20:48:15.573+0400] {{process_utils.py:87}} INFO - Sending the signal 15 to group 46256
+[2025-06-17T20:48:15.574+0400] {{process_utils.py:101}} INFO - Sending the signal 15 to process 46256 as process group is missing.

@@ -1,0 +1,377 @@
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'dag_default_view' setting in [webserver] has the old default value of 'tree'. This value has been changed to 'grid' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/configuration.py:2373 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log'. This value has been changed to 'dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log' in the running config, but please update your config before Apache Airflow 3.0.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/www/extensions/init_appbuilder.py:164 DeprecationWarning: The update_fab_perms option in [webserver] has been moved to the update_fab_perms option in [fab] - the old setting has been used, but please update your config.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+[2025-06-17T19:54:24.780+0400] {{override.py:1912}} INFO - Created Permission View: can create on DAG Runs
+[2025-06-17T19:54:24.787+0400] {{override.py:1963}} INFO - Added Permission can create on DAG Runs to role Admin
+[2025-06-17T19:54:24.795+0400] {{override.py:1912}} INFO - Created Permission View: can read on DAG Runs
+[2025-06-17T19:54:24.801+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Runs to role Admin
+[2025-06-17T19:54:24.808+0400] {{override.py:1912}} INFO - Created Permission View: can edit on DAG Runs
+[2025-06-17T19:54:24.814+0400] {{override.py:1963}} INFO - Added Permission can edit on DAG Runs to role Admin
+[2025-06-17T19:54:24.821+0400] {{override.py:1912}} INFO - Created Permission View: can delete on DAG Runs
+[2025-06-17T19:54:24.827+0400] {{override.py:1963}} INFO - Added Permission can delete on DAG Runs to role Admin
+[2025-06-17T19:54:24.834+0400] {{override.py:1912}} INFO - Created Permission View: menu access on DAG Runs
+[2025-06-17T19:54:24.839+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Runs to role Admin
+[2025-06-17T19:54:24.856+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Browse
+[2025-06-17T19:54:24.863+0400] {{override.py:1963}} INFO - Added Permission menu access on Browse to role Admin
+[2025-06-17T19:54:24.900+0400] {{override.py:1912}} INFO - Created Permission View: can read on Jobs
+[2025-06-17T19:54:24.906+0400] {{override.py:1963}} INFO - Added Permission can read on Jobs to role Admin
+[2025-06-17T19:54:24.913+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Jobs
+[2025-06-17T19:54:24.918+0400] {{override.py:1963}} INFO - Added Permission menu access on Jobs to role Admin
+[2025-06-17T19:54:24.963+0400] {{override.py:1912}} INFO - Created Permission View: can read on Audit Logs
+[2025-06-17T19:54:24.970+0400] {{override.py:1963}} INFO - Added Permission can read on Audit Logs to role Admin
+[2025-06-17T19:54:24.977+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Audit Logs
+[2025-06-17T19:54:24.983+0400] {{override.py:1963}} INFO - Added Permission menu access on Audit Logs to role Admin
+[2025-06-17T19:54:25.030+0400] {{override.py:1912}} INFO - Created Permission View: can create on Variables
+[2025-06-17T19:54:25.036+0400] {{override.py:1963}} INFO - Added Permission can create on Variables to role Admin
+[2025-06-17T19:54:25.043+0400] {{override.py:1912}} INFO - Created Permission View: can read on Variables
+[2025-06-17T19:54:25.049+0400] {{override.py:1963}} INFO - Added Permission can read on Variables to role Admin
+[2025-06-17T19:54:25.055+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Variables
+[2025-06-17T19:54:25.061+0400] {{override.py:1963}} INFO - Added Permission can edit on Variables to role Admin
+[2025-06-17T19:54:25.068+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Variables
+[2025-06-17T19:54:25.073+0400] {{override.py:1963}} INFO - Added Permission can delete on Variables to role Admin
+[2025-06-17T19:54:25.080+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Variables
+[2025-06-17T19:54:25.086+0400] {{override.py:1963}} INFO - Added Permission menu access on Variables to role Admin
+[2025-06-17T19:54:25.102+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Admin
+[2025-06-17T19:54:25.109+0400] {{override.py:1963}} INFO - Added Permission menu access on Admin to role Admin
+[2025-06-17T19:54:25.149+0400] {{override.py:1912}} INFO - Created Permission View: can create on Task Instances
+[2025-06-17T19:54:25.155+0400] {{override.py:1963}} INFO - Added Permission can create on Task Instances to role Admin
+[2025-06-17T19:54:25.162+0400] {{override.py:1912}} INFO - Created Permission View: can read on Task Instances
+[2025-06-17T19:54:25.168+0400] {{override.py:1963}} INFO - Added Permission can read on Task Instances to role Admin
+[2025-06-17T19:54:25.174+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Task Instances
+[2025-06-17T19:54:25.181+0400] {{override.py:1963}} INFO - Added Permission can edit on Task Instances to role Admin
+[2025-06-17T19:54:25.187+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Task Instances
+[2025-06-17T19:54:25.194+0400] {{override.py:1963}} INFO - Added Permission can delete on Task Instances to role Admin
+[2025-06-17T19:54:25.201+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Task Instances
+[2025-06-17T19:54:25.207+0400] {{override.py:1963}} INFO - Added Permission menu access on Task Instances to role Admin
+[2025-06-17T19:54:25.252+0400] {{override.py:1912}} INFO - Created Permission View: can read on Task Reschedules
+[2025-06-17T19:54:25.259+0400] {{override.py:1963}} INFO - Added Permission can read on Task Reschedules to role Admin
+[2025-06-17T19:54:25.266+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Task Reschedules
+[2025-06-17T19:54:25.272+0400] {{override.py:1963}} INFO - Added Permission menu access on Task Reschedules to role Admin
+[2025-06-17T19:54:25.317+0400] {{override.py:1912}} INFO - Created Permission View: can read on Triggers
+[2025-06-17T19:54:25.324+0400] {{override.py:1963}} INFO - Added Permission can read on Triggers to role Admin
+[2025-06-17T19:54:25.330+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Triggers
+[2025-06-17T19:54:25.337+0400] {{override.py:1963}} INFO - Added Permission menu access on Triggers to role Admin
+[2025-06-17T19:54:25.359+0400] {{override.py:1912}} INFO - Created Permission View: can read on Configurations
+[2025-06-17T19:54:25.366+0400] {{override.py:1963}} INFO - Added Permission can read on Configurations to role Admin
+[2025-06-17T19:54:25.373+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Configurations
+[2025-06-17T19:54:25.380+0400] {{override.py:1963}} INFO - Added Permission menu access on Configurations to role Admin
+[2025-06-17T19:54:25.501+0400] {{override.py:1912}} INFO - Created Permission View: can create on Connections
+[2025-06-17T19:54:25.509+0400] {{override.py:1963}} INFO - Added Permission can create on Connections to role Admin
+[2025-06-17T19:54:25.517+0400] {{override.py:1912}} INFO - Created Permission View: can read on Connections
+[2025-06-17T19:54:25.524+0400] {{override.py:1963}} INFO - Added Permission can read on Connections to role Admin
+[2025-06-17T19:54:25.537+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Connections
+[2025-06-17T19:54:25.546+0400] {{override.py:1963}} INFO - Added Permission can edit on Connections to role Admin
+[2025-06-17T19:54:25.554+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Connections
+[2025-06-17T19:54:25.561+0400] {{override.py:1963}} INFO - Added Permission can delete on Connections to role Admin
+[2025-06-17T19:54:25.568+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Connections
+[2025-06-17T19:54:25.574+0400] {{override.py:1963}} INFO - Added Permission menu access on Connections to role Admin
+[2025-06-17T19:54:25.625+0400] {{override.py:1912}} INFO - Created Permission View: can read on SLA Misses
+[2025-06-17T19:54:25.634+0400] {{override.py:1963}} INFO - Added Permission can read on SLA Misses to role Admin
+[2025-06-17T19:54:25.641+0400] {{override.py:1912}} INFO - Created Permission View: menu access on SLA Misses
+[2025-06-17T19:54:25.651+0400] {{override.py:1963}} INFO - Added Permission menu access on SLA Misses to role Admin
+[2025-06-17T19:54:25.658+0400] {{override.py:1912}} INFO - Created Permission View: can delete on SLA Misses
+[2025-06-17T19:54:25.666+0400] {{override.py:1963}} INFO - Added Permission can delete on SLA Misses to role Admin
+[2025-06-17T19:54:25.673+0400] {{override.py:1912}} INFO - Created Permission View: can edit on SLA Misses
+[2025-06-17T19:54:25.680+0400] {{override.py:1963}} INFO - Added Permission can edit on SLA Misses to role Admin
+[2025-06-17T19:54:25.711+0400] {{override.py:1912}} INFO - Created Permission View: can read on Plugins
+[2025-06-17T19:54:25.719+0400] {{override.py:1963}} INFO - Added Permission can read on Plugins to role Admin
+[2025-06-17T19:54:25.728+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Plugins
+[2025-06-17T19:54:25.736+0400] {{override.py:1963}} INFO - Added Permission menu access on Plugins to role Admin
+[2025-06-17T19:54:25.764+0400] {{override.py:1912}} INFO - Created Permission View: can read on Providers
+[2025-06-17T19:54:25.799+0400] {{override.py:1963}} INFO - Added Permission can read on Providers to role Admin
+[2025-06-17T19:54:25.806+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Providers
+[2025-06-17T19:54:25.813+0400] {{override.py:1963}} INFO - Added Permission menu access on Providers to role Admin
+[2025-06-17T19:54:25.859+0400] {{override.py:1912}} INFO - Created Permission View: can create on Pools
+[2025-06-17T19:54:25.866+0400] {{override.py:1963}} INFO - Added Permission can create on Pools to role Admin
+[2025-06-17T19:54:25.873+0400] {{override.py:1912}} INFO - Created Permission View: can read on Pools
+[2025-06-17T19:54:25.881+0400] {{override.py:1963}} INFO - Added Permission can read on Pools to role Admin
+[2025-06-17T19:54:25.887+0400] {{override.py:1912}} INFO - Created Permission View: can edit on Pools
+[2025-06-17T19:54:25.894+0400] {{override.py:1963}} INFO - Added Permission can edit on Pools to role Admin
+[2025-06-17T19:54:25.901+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Pools
+[2025-06-17T19:54:25.908+0400] {{override.py:1963}} INFO - Added Permission can delete on Pools to role Admin
+[2025-06-17T19:54:25.915+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Pools
+[2025-06-17T19:54:25.922+0400] {{override.py:1963}} INFO - Added Permission menu access on Pools to role Admin
+[2025-06-17T19:54:25.971+0400] {{override.py:1912}} INFO - Created Permission View: can read on XComs
+[2025-06-17T19:54:25.979+0400] {{override.py:1963}} INFO - Added Permission can read on XComs to role Admin
+[2025-06-17T19:54:25.987+0400] {{override.py:1912}} INFO - Created Permission View: can delete on XComs
+[2025-06-17T19:54:25.994+0400] {{override.py:1963}} INFO - Added Permission can delete on XComs to role Admin
+[2025-06-17T19:54:26.001+0400] {{override.py:1912}} INFO - Created Permission View: menu access on XComs
+[2025-06-17T19:54:26.008+0400] {{override.py:1963}} INFO - Added Permission menu access on XComs to role Admin
+[2025-06-17T19:54:26.038+0400] {{override.py:1912}} INFO - Created Permission View: menu access on DAG Dependencies
+[2025-06-17T19:54:26.047+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Dependencies to role Admin
+[2025-06-17T19:54:26.084+0400] {{override.py:1912}} INFO - Created Permission View: menu access on DAGs
+[2025-06-17T19:54:26.091+0400] {{override.py:1963}} INFO - Added Permission menu access on DAGs to role Admin
+[2025-06-17T19:54:26.104+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Cluster Activity
+[2025-06-17T19:54:26.112+0400] {{override.py:1963}} INFO - Added Permission menu access on Cluster Activity to role Admin
+[2025-06-17T19:54:26.125+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Datasets
+[2025-06-17T19:54:26.132+0400] {{override.py:1963}} INFO - Added Permission menu access on Datasets to role Admin
+[2025-06-17T19:54:26.146+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Documentation
+[2025-06-17T19:54:26.153+0400] {{override.py:1963}} INFO - Added Permission menu access on Documentation to role Admin
+[2025-06-17T19:54:26.167+0400] {{override.py:1912}} INFO - Created Permission View: menu access on Docs
+[2025-06-17T19:54:26.175+0400] {{override.py:1963}} INFO - Added Permission menu access on Docs to role Admin
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/api_connexion/schemas/task_schema.py:52 ChangedInMarshmallow4Warning: `Number` field should not be instantiated. Use `Integer`, `Float`, or `Decimal` instead.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/api_connexion/schemas/task_schema.py:55 ChangedInMarshmallow4Warning: `Number` field should not be instantiated. Use `Integer`, `Float`, or `Decimal` instead.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/api_connexion/schemas/task_schema.py:59 ChangedInMarshmallow4Warning: `Number` field should not be instantiated. Use `Integer`, `Float`, or `Decimal` instead.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/providers/fab/auth_manager/fab_auth_manager.py:569 DeprecationWarning: The update_fab_perms option in [webserver] has been moved to the update_fab_perms option in [fab] - the old setting has been used, but please update your config.
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/providers/fab/auth_manager/fab_auth_manager.py:570 DeprecationWarning: The update_fab_perms option in [webserver] has been moved to the update_fab_perms option in [fab] - the old setting has been used, but please update your config.
+[2025-06-17T19:54:27.356+0400] {{override.py:1912}} INFO - Created Permission View: can delete on DAGs
+[2025-06-17T19:54:27.365+0400] {{override.py:1912}} INFO - Created Permission View: can read on DAGs
+[2025-06-17T19:54:27.374+0400] {{override.py:1912}} INFO - Created Permission View: can edit on DAGs
+[2025-06-17T19:54:27.390+0400] {{override.py:1508}} INFO - Inserted Role: Public
+[2025-06-17T19:54:27.395+0400] {{override.py:1508}} INFO - Inserted Role: Viewer
+[2025-06-17T19:54:27.403+0400] {{override.py:1963}} INFO - Added Permission can read on DAGs to role Viewer
+[2025-06-17T19:54:27.411+0400] {{override.py:1912}} INFO - Created Permission View: can read on DAG Dependencies
+[2025-06-17T19:54:27.416+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Dependencies to role Viewer
+[2025-06-17T19:54:27.425+0400] {{override.py:1912}} INFO - Created Permission View: can read on DAG Code
+[2025-06-17T19:54:27.430+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Code to role Viewer
+[2025-06-17T19:54:27.434+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Runs to role Viewer
+[2025-06-17T19:54:27.441+0400] {{override.py:1912}} INFO - Created Permission View: can read on Datasets
+[2025-06-17T19:54:27.446+0400] {{override.py:1963}} INFO - Added Permission can read on Datasets to role Viewer
+[2025-06-17T19:54:27.452+0400] {{override.py:1912}} INFO - Created Permission View: can read on Cluster Activity
+[2025-06-17T19:54:27.457+0400] {{override.py:1963}} INFO - Added Permission can read on Cluster Activity to role Viewer
+[2025-06-17T19:54:27.461+0400] {{override.py:1963}} INFO - Added Permission can read on Pools to role Viewer
+[2025-06-17T19:54:27.471+0400] {{override.py:1912}} INFO - Created Permission View: can read on ImportError
+[2025-06-17T19:54:27.476+0400] {{override.py:1963}} INFO - Added Permission can read on ImportError to role Viewer
+[2025-06-17T19:54:27.484+0400] {{override.py:1912}} INFO - Created Permission View: can read on DAG Warnings
+[2025-06-17T19:54:27.489+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Warnings to role Viewer
+[2025-06-17T19:54:27.493+0400] {{override.py:1963}} INFO - Added Permission can read on Jobs to role Viewer
+[2025-06-17T19:54:27.498+0400] {{override.py:1963}} INFO - Added Permission can read on My Password to role Viewer
+[2025-06-17T19:54:27.502+0400] {{override.py:1963}} INFO - Added Permission can edit on My Password to role Viewer
+[2025-06-17T19:54:27.506+0400] {{override.py:1963}} INFO - Added Permission can read on My Profile to role Viewer
+[2025-06-17T19:54:27.511+0400] {{override.py:1963}} INFO - Added Permission can edit on My Profile to role Viewer
+[2025-06-17T19:54:27.516+0400] {{override.py:1963}} INFO - Added Permission can read on SLA Misses to role Viewer
+[2025-06-17T19:54:27.520+0400] {{override.py:1963}} INFO - Added Permission can read on Task Instances to role Viewer
+[2025-06-17T19:54:27.529+0400] {{override.py:1912}} INFO - Created Permission View: can read on Task Logs
+[2025-06-17T19:54:27.534+0400] {{override.py:1963}} INFO - Added Permission can read on Task Logs to role Viewer
+[2025-06-17T19:54:27.539+0400] {{override.py:1963}} INFO - Added Permission can read on XComs to role Viewer
+[2025-06-17T19:54:27.549+0400] {{override.py:1912}} INFO - Created Permission View: can read on Website
+[2025-06-17T19:54:27.553+0400] {{override.py:1963}} INFO - Added Permission can read on Website to role Viewer
+[2025-06-17T19:54:27.557+0400] {{override.py:1963}} INFO - Added Permission menu access on Browse to role Viewer
+[2025-06-17T19:54:27.562+0400] {{override.py:1963}} INFO - Added Permission menu access on DAGs to role Viewer
+[2025-06-17T19:54:27.566+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Dependencies to role Viewer
+[2025-06-17T19:54:27.570+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Runs to role Viewer
+[2025-06-17T19:54:27.575+0400] {{override.py:1963}} INFO - Added Permission menu access on Datasets to role Viewer
+[2025-06-17T19:54:27.579+0400] {{override.py:1963}} INFO - Added Permission menu access on Cluster Activity to role Viewer
+[2025-06-17T19:54:27.584+0400] {{override.py:1963}} INFO - Added Permission menu access on Documentation to role Viewer
+[2025-06-17T19:54:27.589+0400] {{override.py:1963}} INFO - Added Permission menu access on Docs to role Viewer
+[2025-06-17T19:54:27.593+0400] {{override.py:1963}} INFO - Added Permission menu access on Jobs to role Viewer
+[2025-06-17T19:54:27.598+0400] {{override.py:1963}} INFO - Added Permission menu access on SLA Misses to role Viewer
+[2025-06-17T19:54:27.602+0400] {{override.py:1963}} INFO - Added Permission menu access on Task Instances to role Viewer
+[2025-06-17T19:54:27.607+0400] {{override.py:1508}} INFO - Inserted Role: User
+[2025-06-17T19:54:27.612+0400] {{override.py:1963}} INFO - Added Permission can read on DAGs to role User
+[2025-06-17T19:54:27.619+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Dependencies to role User
+[2025-06-17T19:54:27.625+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Code to role User
+[2025-06-17T19:54:27.629+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Runs to role User
+[2025-06-17T19:54:27.636+0400] {{override.py:1963}} INFO - Added Permission can read on Datasets to role User
+[2025-06-17T19:54:27.643+0400] {{override.py:1963}} INFO - Added Permission can read on Cluster Activity to role User
+[2025-06-17T19:54:27.648+0400] {{override.py:1963}} INFO - Added Permission can read on Pools to role User
+[2025-06-17T19:54:27.654+0400] {{override.py:1963}} INFO - Added Permission can read on ImportError to role User
+[2025-06-17T19:54:27.661+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Warnings to role User
+[2025-06-17T19:54:27.665+0400] {{override.py:1963}} INFO - Added Permission can read on Jobs to role User
+[2025-06-17T19:54:27.669+0400] {{override.py:1963}} INFO - Added Permission can read on My Password to role User
+[2025-06-17T19:54:27.673+0400] {{override.py:1963}} INFO - Added Permission can edit on My Password to role User
+[2025-06-17T19:54:27.678+0400] {{override.py:1963}} INFO - Added Permission can read on My Profile to role User
+[2025-06-17T19:54:27.682+0400] {{override.py:1963}} INFO - Added Permission can edit on My Profile to role User
+[2025-06-17T19:54:27.687+0400] {{override.py:1963}} INFO - Added Permission can read on SLA Misses to role User
+[2025-06-17T19:54:27.692+0400] {{override.py:1963}} INFO - Added Permission can read on Task Instances to role User
+[2025-06-17T19:54:27.699+0400] {{override.py:1963}} INFO - Added Permission can read on Task Logs to role User
+[2025-06-17T19:54:27.703+0400] {{override.py:1963}} INFO - Added Permission can read on XComs to role User
+[2025-06-17T19:54:27.710+0400] {{override.py:1963}} INFO - Added Permission can read on Website to role User
+[2025-06-17T19:54:27.715+0400] {{override.py:1963}} INFO - Added Permission menu access on Browse to role User
+[2025-06-17T19:54:27.720+0400] {{override.py:1963}} INFO - Added Permission menu access on DAGs to role User
+[2025-06-17T19:54:27.724+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Dependencies to role User
+[2025-06-17T19:54:27.729+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Runs to role User
+[2025-06-17T19:54:27.733+0400] {{override.py:1963}} INFO - Added Permission menu access on Datasets to role User
+[2025-06-17T19:54:27.738+0400] {{override.py:1963}} INFO - Added Permission menu access on Cluster Activity to role User
+[2025-06-17T19:54:27.742+0400] {{override.py:1963}} INFO - Added Permission menu access on Documentation to role User
+[2025-06-17T19:54:27.747+0400] {{override.py:1963}} INFO - Added Permission menu access on Docs to role User
+[2025-06-17T19:54:27.752+0400] {{override.py:1963}} INFO - Added Permission menu access on Jobs to role User
+[2025-06-17T19:54:27.756+0400] {{override.py:1963}} INFO - Added Permission menu access on SLA Misses to role User
+[2025-06-17T19:54:27.761+0400] {{override.py:1963}} INFO - Added Permission menu access on Task Instances to role User
+[2025-06-17T19:54:27.765+0400] {{override.py:1963}} INFO - Added Permission can edit on DAGs to role User
+[2025-06-17T19:54:27.770+0400] {{override.py:1963}} INFO - Added Permission can delete on DAGs to role User
+[2025-06-17T19:54:27.774+0400] {{override.py:1963}} INFO - Added Permission can create on Task Instances to role User
+[2025-06-17T19:54:27.778+0400] {{override.py:1963}} INFO - Added Permission can edit on Task Instances to role User
+[2025-06-17T19:54:27.782+0400] {{override.py:1963}} INFO - Added Permission can delete on Task Instances to role User
+[2025-06-17T19:54:27.787+0400] {{override.py:1963}} INFO - Added Permission can create on DAG Runs to role User
+[2025-06-17T19:54:27.791+0400] {{override.py:1963}} INFO - Added Permission can edit on DAG Runs to role User
+[2025-06-17T19:54:27.796+0400] {{override.py:1963}} INFO - Added Permission can delete on DAG Runs to role User
+[2025-06-17T19:54:27.802+0400] {{override.py:1912}} INFO - Created Permission View: can create on Datasets
+[2025-06-17T19:54:27.806+0400] {{override.py:1963}} INFO - Added Permission can create on Datasets to role User
+[2025-06-17T19:54:27.812+0400] {{override.py:1508}} INFO - Inserted Role: Op
+[2025-06-17T19:54:27.817+0400] {{override.py:1963}} INFO - Added Permission can read on DAGs to role Op
+[2025-06-17T19:54:27.824+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Dependencies to role Op
+[2025-06-17T19:54:27.832+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Code to role Op
+[2025-06-17T19:54:27.837+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Runs to role Op
+[2025-06-17T19:54:27.845+0400] {{override.py:1963}} INFO - Added Permission can read on Datasets to role Op
+[2025-06-17T19:54:27.852+0400] {{override.py:1963}} INFO - Added Permission can read on Cluster Activity to role Op
+[2025-06-17T19:54:27.857+0400] {{override.py:1963}} INFO - Added Permission can read on Pools to role Op
+[2025-06-17T19:54:27.864+0400] {{override.py:1963}} INFO - Added Permission can read on ImportError to role Op
+[2025-06-17T19:54:27.871+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Warnings to role Op
+[2025-06-17T19:54:27.875+0400] {{override.py:1963}} INFO - Added Permission can read on Jobs to role Op
+[2025-06-17T19:54:27.881+0400] {{override.py:1963}} INFO - Added Permission can read on My Password to role Op
+[2025-06-17T19:54:27.885+0400] {{override.py:1963}} INFO - Added Permission can edit on My Password to role Op
+[2025-06-17T19:54:27.890+0400] {{override.py:1963}} INFO - Added Permission can read on My Profile to role Op
+[2025-06-17T19:54:27.895+0400] {{override.py:1963}} INFO - Added Permission can edit on My Profile to role Op
+[2025-06-17T19:54:27.899+0400] {{override.py:1963}} INFO - Added Permission can read on SLA Misses to role Op
+[2025-06-17T19:54:27.903+0400] {{override.py:1963}} INFO - Added Permission can read on Task Instances to role Op
+[2025-06-17T19:54:27.910+0400] {{override.py:1963}} INFO - Added Permission can read on Task Logs to role Op
+[2025-06-17T19:54:27.914+0400] {{override.py:1963}} INFO - Added Permission can read on XComs to role Op
+[2025-06-17T19:54:27.921+0400] {{override.py:1963}} INFO - Added Permission can read on Website to role Op
+[2025-06-17T19:54:27.925+0400] {{override.py:1963}} INFO - Added Permission menu access on Browse to role Op
+[2025-06-17T19:54:27.930+0400] {{override.py:1963}} INFO - Added Permission menu access on DAGs to role Op
+[2025-06-17T19:54:27.935+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Dependencies to role Op
+[2025-06-17T19:54:27.939+0400] {{override.py:1963}} INFO - Added Permission menu access on DAG Runs to role Op
+[2025-06-17T19:54:27.945+0400] {{override.py:1963}} INFO - Added Permission menu access on Datasets to role Op
+[2025-06-17T19:54:27.950+0400] {{override.py:1963}} INFO - Added Permission menu access on Cluster Activity to role Op
+[2025-06-17T19:54:27.955+0400] {{override.py:1963}} INFO - Added Permission menu access on Documentation to role Op
+[2025-06-17T19:54:27.960+0400] {{override.py:1963}} INFO - Added Permission menu access on Docs to role Op
+[2025-06-17T19:54:27.965+0400] {{override.py:1963}} INFO - Added Permission menu access on Jobs to role Op
+[2025-06-17T19:54:27.969+0400] {{override.py:1963}} INFO - Added Permission menu access on SLA Misses to role Op
+[2025-06-17T19:54:27.974+0400] {{override.py:1963}} INFO - Added Permission menu access on Task Instances to role Op
+[2025-06-17T19:54:27.979+0400] {{override.py:1963}} INFO - Added Permission can edit on DAGs to role Op
+[2025-06-17T19:54:27.983+0400] {{override.py:1963}} INFO - Added Permission can delete on DAGs to role Op
+[2025-06-17T19:54:27.988+0400] {{override.py:1963}} INFO - Added Permission can create on Task Instances to role Op
+[2025-06-17T19:54:27.993+0400] {{override.py:1963}} INFO - Added Permission can edit on Task Instances to role Op
+[2025-06-17T19:54:27.998+0400] {{override.py:1963}} INFO - Added Permission can delete on Task Instances to role Op
+[2025-06-17T19:54:28.003+0400] {{override.py:1963}} INFO - Added Permission can create on DAG Runs to role Op
+[2025-06-17T19:54:28.007+0400] {{override.py:1963}} INFO - Added Permission can edit on DAG Runs to role Op
+[2025-06-17T19:54:28.011+0400] {{override.py:1963}} INFO - Added Permission can delete on DAG Runs to role Op
+[2025-06-17T19:54:28.019+0400] {{override.py:1963}} INFO - Added Permission can create on Datasets to role Op
+[2025-06-17T19:54:28.024+0400] {{override.py:1963}} INFO - Added Permission can read on Configurations to role Op
+[2025-06-17T19:54:28.029+0400] {{override.py:1963}} INFO - Added Permission menu access on Admin to role Op
+[2025-06-17T19:54:28.034+0400] {{override.py:1963}} INFO - Added Permission menu access on Configurations to role Op
+[2025-06-17T19:54:28.039+0400] {{override.py:1963}} INFO - Added Permission menu access on Connections to role Op
+[2025-06-17T19:54:28.045+0400] {{override.py:1963}} INFO - Added Permission menu access on Pools to role Op
+[2025-06-17T19:54:28.050+0400] {{override.py:1963}} INFO - Added Permission menu access on Plugins to role Op
+[2025-06-17T19:54:28.054+0400] {{override.py:1963}} INFO - Added Permission menu access on Variables to role Op
+[2025-06-17T19:54:28.059+0400] {{override.py:1963}} INFO - Added Permission menu access on Providers to role Op
+[2025-06-17T19:54:28.064+0400] {{override.py:1963}} INFO - Added Permission menu access on XComs to role Op
+[2025-06-17T19:54:28.069+0400] {{override.py:1963}} INFO - Added Permission can create on Connections to role Op
+[2025-06-17T19:54:28.073+0400] {{override.py:1963}} INFO - Added Permission can read on Connections to role Op
+[2025-06-17T19:54:28.078+0400] {{override.py:1963}} INFO - Added Permission can edit on Connections to role Op
+[2025-06-17T19:54:28.082+0400] {{override.py:1963}} INFO - Added Permission can delete on Connections to role Op
+[2025-06-17T19:54:28.087+0400] {{override.py:1963}} INFO - Added Permission can create on Pools to role Op
+[2025-06-17T19:54:28.092+0400] {{override.py:1963}} INFO - Added Permission can edit on Pools to role Op
+[2025-06-17T19:54:28.097+0400] {{override.py:1963}} INFO - Added Permission can delete on Pools to role Op
+[2025-06-17T19:54:28.101+0400] {{override.py:1963}} INFO - Added Permission can read on Plugins to role Op
+[2025-06-17T19:54:28.106+0400] {{override.py:1963}} INFO - Added Permission can read on Providers to role Op
+[2025-06-17T19:54:28.111+0400] {{override.py:1963}} INFO - Added Permission can create on Variables to role Op
+[2025-06-17T19:54:28.115+0400] {{override.py:1963}} INFO - Added Permission can read on Variables to role Op
+[2025-06-17T19:54:28.120+0400] {{override.py:1963}} INFO - Added Permission can edit on Variables to role Op
+[2025-06-17T19:54:28.124+0400] {{override.py:1963}} INFO - Added Permission can delete on Variables to role Op
+[2025-06-17T19:54:28.129+0400] {{override.py:1963}} INFO - Added Permission can delete on XComs to role Op
+[2025-06-17T19:54:28.136+0400] {{override.py:1912}} INFO - Created Permission View: can delete on Datasets
+[2025-06-17T19:54:28.141+0400] {{override.py:1963}} INFO - Added Permission can delete on Datasets to role Op
+[2025-06-17T19:54:28.148+0400] {{override.py:1963}} INFO - Added Permission can read on DAGs to role Admin
+[2025-06-17T19:54:28.155+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Dependencies to role Admin
+[2025-06-17T19:54:28.162+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Code to role Admin
+[2025-06-17T19:54:28.168+0400] {{override.py:1963}} INFO - Added Permission can read on Datasets to role Admin
+[2025-06-17T19:54:28.175+0400] {{override.py:1963}} INFO - Added Permission can read on Cluster Activity to role Admin
+[2025-06-17T19:54:28.181+0400] {{override.py:1963}} INFO - Added Permission can read on ImportError to role Admin
+[2025-06-17T19:54:28.188+0400] {{override.py:1963}} INFO - Added Permission can read on DAG Warnings to role Admin
+[2025-06-17T19:54:28.195+0400] {{override.py:1963}} INFO - Added Permission can read on Task Logs to role Admin
+[2025-06-17T19:54:28.202+0400] {{override.py:1963}} INFO - Added Permission can read on Website to role Admin
+[2025-06-17T19:54:28.207+0400] {{override.py:1963}} INFO - Added Permission can edit on DAGs to role Admin
+[2025-06-17T19:54:28.212+0400] {{override.py:1963}} INFO - Added Permission can delete on DAGs to role Admin
+[2025-06-17T19:54:28.219+0400] {{override.py:1963}} INFO - Added Permission can create on Datasets to role Admin
+[2025-06-17T19:54:28.225+0400] {{override.py:1963}} INFO - Added Permission can delete on Datasets to role Admin
+[2025-06-17 19:54:28 +0400] [40388] [INFO] Starting gunicorn 23.0.0
+[2025-06-17 19:54:28 +0400] [40388] [INFO] Listening at: http://0.0.0.0:8081 (40388)
+[2025-06-17 19:54:28 +0400] [40388] [INFO] Using worker: sync
+[2025-06-17 19:54:28 +0400] [40406] [INFO] Booting worker with pid: 40406
+127.0.0.1 - - [17/Jun/2025:19:54:41 +0400] "GET / HTTP/1.1" 302 197 "-" "curl/7.88.1"
+127.0.0.1 - - [17/Jun/2025:19:54:48 +0400] "GET /health HTTP/1.1" 200 283 "-" "curl/7.88.1"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /?id=2d4174f6-6e1a-4a36-9247-d23eb95b5669&vscodeBrowserReqId=1750175696252 HTTP/1.1" 302 197 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /home HTTP/1.1" 302 285 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+/Users/yuriy.samorodov/Documents/МФТИ/Семестр 2/Data Engineering/Exam/ml-pipeline-project/venv/lib/python3.12/site-packages/airflow/www/security_manager.py:257 AirflowProviderDeprecationWarning: is_authorized_dataset will be renamed as is_authorized_asset in Airflow 3 and will be removed when the minimum Airflow version is set to 3.0 for the fab provider
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome HTTP/1.1" 200 18703 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/bootstrap.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/fontawesome/fontawesome.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/fontawesome/regular.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/airflowDefaultTheme.f664c2f31c2dd026f579.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/materialIcons.b2aed9f877c993431fde.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/main.fb487bd34c7cd20f02bc.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/loadingDots.919e5f1534f5f57b7eb4.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/flash.65805954dad3c27a3986.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/fontawesome/solid.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/fontawesome/brands.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/bootstrap-datepicker/bootstrap-datepicker3.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/fontawesome/v4-shims.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/select2/select2.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/select2/select2-bootstrap.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/flags/flags16.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/ab.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/bootstrap-datetimepicker.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/moment.af388b38f7330f0c8f38.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/main.fb487bd34c7cd20f02bc.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/toggleTheme.acf125721c09f1a04027.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/jquery-latest.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/ab_filters.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/ab_actions.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/bootstrap.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/bootstrap-datepicker/bootstrap-datepicker.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/select2/select2.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/js/ab.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/bootstrap-datetimepicker.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/dist/bootstrap3-typeahead.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 0 "http://localhost:8081/static/appbuilder/css/fontawesome/solid.min.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:54:56 +0400] "GET /static/appbuilder/css/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 0 "http://localhost:8081/static/appbuilder/css/fontawesome/regular.min.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+[2025-06-17T19:55:06.525+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [17/Jun/2025:19:55:06 +0400] "POST /login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome HTTP/1.1" 400 125 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.0 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET / HTTP/1.1" 302 197 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /home HTTP/1.1" 302 285 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome HTTP/1.1" 200 18703 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/pin_32.png HTTP/1.1" 200 0 "http://localhost:8081/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/assets/index-QiQVuLYY.js HTTP/1.1" 404 528 "http://localhost:8081/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/airflowDefaultTheme.f664c2f31c2dd026f579.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/materialIcons.b2aed9f877c993431fde.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/main.fb487bd34c7cd20f02bc.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/loadingDots.919e5f1534f5f57b7eb4.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/flash.65805954dad3c27a3986.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/moment.af388b38f7330f0c8f38.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/main.fb487bd34c7cd20f02bc.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/fontawesome/solid.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/toggleTheme.acf125721c09f1a04027.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/fontawesome/regular.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/fontawesome/fontawesome.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/fontawesome/brands.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/fontawesome/v4-shims.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/bootstrap.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/bootstrap-datepicker/bootstrap-datepicker3.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/ab.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/flags/flags16.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/select2/select2.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/appbuilder/css/select2/select2-bootstrap.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:18 +0400] "GET /static/dist/bootstrap-datetimepicker.min.css HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/ab_filters.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/bootstrap.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/jquery-latest.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/ab_actions.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/ab.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/bootstrap-datepicker/bootstrap-datepicker.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/dist/bootstrap-datetimepicker.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/js/select2/select2.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/dist/bootstrap3-typeahead.min.js HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/css/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:19 +0400] "GET /static/appbuilder/css/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 0 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+[2025-06-17T19:55:28.478+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [17/Jun/2025:19:55:28 +0400] "POST /login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome HTTP/1.1" 400 125 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+127.0.0.1 - - [17/Jun/2025:19:55:28 +0400] "GET /favicon.ico HTTP/1.1" 404 528 "http://localhost:8081/login/?next=http%3A%2F%2Flocalhost%3A8081%2Fhome" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+Running the Gunicorn Server with:
+Workers: 1 sync
+Host: 0.0.0.0:8081
+Timeout: 120
+Logfiles: - -
+Access Logformat: 
+=================================================================
+[2025-06-17T19:56:26.671+0400] {{webserver_command.py:430}} INFO - Received signal: 15. Closing gunicorn.
+[2025-06-17 19:56:26 +0400] [40388] [INFO] Handling signal: term
+[2025-06-17 19:56:26 +0400] [40406] [INFO] Worker exiting (pid: 40406)
+[2025-06-17 19:56:27 +0400] [40388] [INFO] Shutting down: Master
