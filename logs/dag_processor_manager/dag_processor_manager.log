@@ -6830,3 +6830,41 @@ File Path                                     PID    Runtime      # DAGs    # Er
 /opt/airflow/dags/ml_pipeline_dag.py                                   0           1  0.07s           2025-06-17T21:08:11                       5
 /opt/airflow/dags/simple_test_dag_working.py                           0           1  0.06s           2025-06-17T21:08:11                       5
 ================================================================================
+[2025-06-17T21:08:45.116+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/simple_test_dag_working.py                           0           1  0.07s           2025-06-17T21:08:42                       5
+/opt/airflow/dags/ml_pipeline_dag.py                                   0           1  0.06s           2025-06-17T21:08:42                       5
+================================================================================
+[2025-06-17T21:09:15.399+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/simple_test_dag_working.py                           0           1  0.06s           2025-06-17T21:09:12                       5
+/opt/airflow/dags/ml_pipeline_dag.py                                   0           1  0.06s           2025-06-17T21:09:12                       5
+================================================================================
+[2025-06-17T21:09:45.721+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/simple_test_dag_working.py                           0           1  0.09s           2025-06-17T21:09:42                       5
+/opt/airflow/dags/ml_pipeline_dag.py                                   0           1  0.09s           2025-06-17T21:09:42                       5
+================================================================================
+[2025-06-17T21:10:07.880+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-06-17T21:10:07.896+0000] {manager.py:824} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-17T21:10:16.035+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/simple_test_dag_working.py                           0           1  0.06s           2025-06-17T21:10:13                       5
+/opt/airflow/dags/ml_pipeline_dag.py                                   0           1  0.06s           2025-06-17T21:10:13                       5
+================================================================================

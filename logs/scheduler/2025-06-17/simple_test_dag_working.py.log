@@ -3992,3 +3992,54 @@ Traceback (most recent call last):
 IndentationError: expected an indented block after function definition on line 10
 [2025-06-17T21:08:42.057+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/simple_test_dag_working.py
 [2025-06-17T21:08:42.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/simple_test_dag_working.py took 0.045 seconds
+[2025-06-17T21:09:12.330+0000] {processor.py:186} INFO - Started process (PID=5018) to work on /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:09:12.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/simple_test_dag_working.py for tasks to queue
+[2025-06-17T21:09:12.333+0000] {logging_mixin.py:190} INFO - [2025-06-17T21:09:12.332+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:09:12.338+0000] {logging_mixin.py:190} INFO - [2025-06-17T21:09:12.337+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/simple_test_dag_working.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/simple_test_dag_working.py", line 11
+    print("Тестовая функция работает!")
+    ^^^^^
+IndentationError: expected an indented block after function definition on line 10
+[2025-06-17T21:09:12.340+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:09:12.361+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/simple_test_dag_working.py took 0.038 seconds
+[2025-06-17T21:09:42.628+0000] {processor.py:186} INFO - Started process (PID=5034) to work on /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:09:42.629+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/simple_test_dag_working.py for tasks to queue
+[2025-06-17T21:09:42.632+0000] {logging_mixin.py:190} INFO - [2025-06-17T21:09:42.631+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:09:42.644+0000] {logging_mixin.py:190} INFO - [2025-06-17T21:09:42.641+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/simple_test_dag_working.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/simple_test_dag_working.py", line 11
+    print("Тестовая функция работает!")
+    ^^^^^
+IndentationError: expected an indented block after function definition on line 10
+[2025-06-17T21:09:42.645+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:09:42.674+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/simple_test_dag_working.py took 0.057 seconds
+[2025-06-17T21:10:12.964+0000] {processor.py:186} INFO - Started process (PID=5050) to work on /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:10:12.965+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/simple_test_dag_working.py for tasks to queue
+[2025-06-17T21:10:12.966+0000] {logging_mixin.py:190} INFO - [2025-06-17T21:10:12.966+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:10:12.972+0000] {logging_mixin.py:190} INFO - [2025-06-17T21:10:12.971+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/simple_test_dag_working.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/simple_test_dag_working.py", line 11
+    print("Тестовая функция работает!")
+    ^^^^^
+IndentationError: expected an indented block after function definition on line 10
+[2025-06-17T21:10:12.974+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/simple_test_dag_working.py
+[2025-06-17T21:10:12.996+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/simple_test_dag_working.py took 0.040 seconds

@@ -8795,3 +8795,139 @@ Access Logformat:
 127.0.0.1 - - [18/Jun/2025:01:08:42 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 127.0.0.1 - - [18/Jun/2025:01:08:42 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 127.0.0.1 - - [18/Jun/2025:01:08:42 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:08:48.278+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:08:48.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:08:48.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:08:48.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:08:48 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:08:48 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:08:48 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:08:48 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:08:54.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:08:54.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:08:54.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:08:54.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:08:54 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:08:54 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:08:54 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:08:54 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:00.278+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:00.278+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:00.278+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:00.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:00 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:00 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:00 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:00 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:06.278+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:06.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:06.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:06.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:06 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:06 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:06 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:06 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:12.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:12.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:12.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:12.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:12 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:12 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:12 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:12 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:18.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:18.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:18.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:18.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:18 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:18 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:18 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:18 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:24.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:24.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:24.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:24.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:24 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:24 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:24 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:24 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:30.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:30.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:30.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:30.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:30 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:30 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:30 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:30 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:36.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:36.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:36.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:36.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:36 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:36 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:36 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:36 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:42.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:42.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:42.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:42.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:42 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:42 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:42 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:42 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:48.277+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:48.277+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:48.277+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:48.277+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:48 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:48 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:48 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:48 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:09:54.282+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:54.282+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:54.282+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:09:54.282+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:09:54 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:54 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:54 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:09:54 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:10:00.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:00.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:00.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:00.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:10:00 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:00 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:00 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:00 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:10:06.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:06.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:06.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:06.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:10:06 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:06 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:06 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:06 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:10:12.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:12.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:12.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:12.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:10:12 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:12 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:12 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:12 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:10:18.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:18.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:18.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:18.280+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:10:18 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:18 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:18 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:18 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[2025-06-18T01:10:24.278+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:24.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:24.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+[2025-06-18T01:10:24.279+0400] {{csrf.py:263}} INFO - The CSRF session token is missing.
+127.0.0.1 - - [18/Jun/2025:01:10:24 +0400] "POST /last_dagruns HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:24 +0400] "POST /task_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:24 +0400] "POST /dag_stats HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+127.0.0.1 - - [18/Jun/2025:01:10:24 +0400] "POST /next_run_datasets_summary HTTP/1.1" 400 125 "http://localhost:8082/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; Chromium GOST) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
