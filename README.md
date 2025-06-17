@@ -812,6 +812,9 @@ docker-compose down -v
 
 ### Пример Docker
 ![Docker Web](https://github.com/YuriySamorodov/mipt-s2-de-exam-ml-pipeline-wbcd/blob/main/screenshots/setup/docker%20hub%20webui%202.png)
+*Образы Docker в Docker Hub*
+
+![Docker Desktop](https://github.com/YuriySamorodov/mipt-s2-de-exam-ml-pipeline-wbcd/blob/main/screenshots/setup/Docker%20Desktop.png)
 
 ![Docker Deploy](screenshots/setup/docker%20deploy.png)
 *Пример развертывания ML Pipeline в Docker с использованием docker-compose*
