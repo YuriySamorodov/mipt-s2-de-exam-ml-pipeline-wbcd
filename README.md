@@ -815,6 +815,7 @@ docker-compose down -v
 *Образы Docker в Docker Hub*
 
 ![Docker Desktop](https://github.com/YuriySamorodov/mipt-s2-de-exam-ml-pipeline-wbcd/blob/main/screenshots/setup/Docker%20Desktop.png)
+*Главный экран Docker Desktop*
 
 ![Docker Deploy](screenshots/setup/docker%20deploy.png)
 *Пример развертывания ML Pipeline в Docker с использованием docker-compose*
