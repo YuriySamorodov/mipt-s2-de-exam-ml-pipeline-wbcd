@@ -439,6 +439,10 @@ export AIRFLOW__WEBSERVER__WEB_SERVER_PORT=8082
 ./stop-postgres.sh
 ```
 
+### Пример работы с PostgreSQL
+![PostgreSQL Database](screenshots/database/postgres%20dataset%20db.png)
+*Подключение к базе данных PostgreSQL с загруженными данными*
+
 ---
 
 ## Docker запуск (PostgreSQL - Порт 8083)
@@ -805,6 +809,10 @@ docker-compose down
 # Полная очистка (с данными)
 docker-compose down -v
 ```
+
+### Пример Docker развертывания
+![Docker Deploy](screenshots/setup/docker%20deploy.png)
+*Пример развертывания ML Pipeline в Docker с использованием docker-compose*
 
 ## Сборка Docker Image
 
